@@ -1,0 +1,11 @@
+body{background-image: url("https://i.ytimg.com/vi/p693u53Q10U/maxresdefault.jpg");
+    background-size: cover;
+    
+}
+h1{
+    color: aquamarine;
+    background-color: blue;
+    margin: 50px solid green
+    
+    ; 
+}
