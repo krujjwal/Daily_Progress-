@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            width: 90%;
+            height: 80px;
+            background-color: rgb(13, 28, 172);
+            font-size: 30px;
+            color: rgb(238, 79, 79);
+
+        }
+        .section1{
+            width: 40%;
+            height: 600px;
+            background-color: tomato;
+            font-size: 60px;
+            color: indigo;
+            float: left;
+        }
+        .section2{
+            width: 50%;
+            height: 600px;
+            background-color: gray;
+            font-size: 60px;
+            color: rgb(16, 17, 82);
+            float: right;
+        }
+        .footer{
+            width: 90%;
+            height: 80px;
+            background-color: rgb(13, 28, 172);
+            font-size: 30px;
+            color: rgb(238, 79, 79);
+          
+
+        }
+        main::after{
+            display: table;
+            clear: both;
+            content: "";
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            THIS IS HEADER
+        </div>
+        <div class="section1">
+            THIS IS SECTION1
+        </div>
+        <div class="section2">
+            THIS IS SECTION2
+        </div>
+        <div class="footer">
+            THIS IS FOOTER
+        </div>
+    </div>
+</body>
+</html>
