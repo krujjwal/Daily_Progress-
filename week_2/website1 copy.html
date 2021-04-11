@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ::placeholder{
+            color: darkblue;
+        }
+        .container1{
+            display: flex;
+            align-items: flex-end;
+            
+            
+        }
+        .container2{
+            display: flex;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-left: 150px;
+            }
+        .container2 p{
+            margin-left: 50px;
+        }
+        .container3{
+            height: 250px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+           
+            
+        }
+        .container4{
+            height: 50px;
+            width: 100px;
+            display: flex;
+            padding-left: 150px;
+        }
+        .container5{
+            /* height: 50;
+            width: 200px; */
+            display: flex;
+            text-align: left;
+            
+        }  
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <img src="https://thenetmencorp.com/wp-content/uploads/2017/09/LOGO-57_FONTMEANING_IT_EDUCATION_DATING_COACH-601x321.jpg?x89428" height="80px" width="100px">
+        <input type="text" placeholder="search something"  style="border-radius: 10px; border: 2px solid blue; font-size: 20px; background-color: rgb(120, 168, 170); color: darkblue; height: 40px; width:400px; text-align: left;margin-left: 130px;">
+        <p style="font-size: 20px; font-weight: 700; margin-left: 180px; margin-top: 20px; justify-items: end;">SignIn</p>
+        <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+            <button style="background-color: rgb(7, 167, 7); font-size: 25px; color: rgb(202, 17, 42); margin-left: 200px; ">
+                SignUp
+            </button>
+        </a>
+    </div>
+    <div class="container2">
+        <p >Filter</p>
+        <p>Clear</p>
+        <p>Everything</p>
+        <p>Live Auction</p>
+        <p>Eligible For Auction</p>
+        <p>Buy Now</p>
+        <div style="margin-left: 70px; margin-top: 15px; margin-left: 170px;">
+            <select name="price" id="price">
+                <option value="lowest price" >Lowest price</option>
+                <option value="Highest price">Highest price</option>
+            </select>
+        </div>
+    </div>
+    <div class="container3">
+        <div style="padding-top: 10px; margin-left: 20px;" >
+            <h4>Price</h4>
+            <select name="value" id="amount">
+                <option value="amount">$100</option>
+                <option value="amount">$200</option>
+            </select>
+            <select name="value" id="amount">
+                <option value="amount">$4000</option>
+                <option value="amount">$5000</option>
+            </select>
+            <div style="display: flex; flex-direction: row; margin-top: 5px;">
+                <input type="radio">
+                <p style="margin-top: 1px;">North</p>
+            </div>
+            <div style="display: flex; flex-direction: row;margin-top: 5px;">
+                <input type="radio">
+                <p style="margin-top: 1px;">South</p>
+            </div>
+            <div style="display: flex; flex-direction: row;margin-top: 5px;">
+                <input type="radio">
+                <p style="margin-top: 1px;">West</p>
+            </div>
+            <div style="display: flex; flex-direction: row;margin-top: 5px;">
+                <input type="radio">
+                <p style="margin-top: 1px;">East</p>
+            </div>
+            <div style="display: flex; flex-direction: row;margin-top: 5px;">
+                <input type="radio">
+                <p style="margin-top: 1px;">Any New</p>
+            </div>
+        </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" style="width: 280px; height: 200px; margin-left: 100px;">
+            </div>
+            <div>
+                <img src="http://img.timeinc.net/time/photoessays/2010/smart_cities/smart_cities_01.jpg"style="width: 280px; height: 200px; margin-left: 50px;">
+            </div>
+            <div>
+                <img src="https://assets.unenvironment.org/2020-02/sustainable-cities.jpg"style="width: 280px; height: 200px;margin-left: 50px;">
+            </div>
+     
+    </div>
+    <div class="container3">
+        <div style="padding-top: 50px; margin-left: 20px;" >
+            <div>
+                <h3>MSRP</h3>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <input type="radio">
+                <p style="margin-top: 1px;">0-20%</p>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <input type="radio">
+                <p style="margin-top: 1px;">20-40%</p>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <input type="radio">
+                <p style="margin-top: 1px;">40-60%</p>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <input type="radio">
+                <p style="margin-top: 1px;">60-90%</p>
+            </div>
+            <div>
+
+
+        </div>
+    </div>
+    <div class="container4">
+        <div>
+            <button style="background-color: rgb(8, 135, 253); width: 100px; color: rgb(102, 4, 4) ">Live Auction</button>
+        </div>
+        <div>
+            <button style="background-color: rgb(8, 253, 90);width: 100px; margin-left: 70px; color: rgb(110, 6, 6); font-weight: 600;">Live Auction</button>
+        </div>
+        <div>
+            <button style="background-color: rgb(8, 163, 253);width: 100px; margin-left: 50px;color: rgb(100, 6, 6);font-weight: 600;">Live Auction</button>
+        </div>
+        <div>
+            <button style="background-color: rgb(8, 253, 49);width: 100px; margin-left: 80px;color: rgb(110, 6, 6);font-weight: 600;">Live Auction</button>
+        </div>
+        <div>
+            <button style="background-color: rgb(253, 8, 241);width: 100px; margin-left: 150px;color: rgb(97, 9, 9);font-weight: 600;">Live Auction</button>
+        </div>
+
+    </div>
+    <div class="container5">
+        <div style="font-weight: 600; margin-top: 50px; margin-left: 0px; height: 30px; width: 200px;">
+            Origin iphone Boxes By
+            Apple Liquident Lot
+        </div>
+        <div style="font-weight: 600; margin-top: 50px; margin-left: 50px;">
+            2 players RC Battle Boxing
+            Robots by Shift3
+
+        </div>
+        <div style="font-weight: 600; margin-top: 50px; margin-left: 10px;">
+            Speakers,LED Lights,DVD players,
+            Printers, and More Electronics...
+
+        </div>
+    </div>
+
+</body>
+</html>
