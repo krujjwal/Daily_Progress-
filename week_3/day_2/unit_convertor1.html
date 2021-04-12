@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" step="any" placeholder="kms" id="1">
+    <!-- step any is used to take any type of number like decimal -->
+    <span>kms</span>
+    <button onclick="func()">convert</button>
+    <h1 id="2"></h1>
+    <script>
+        function func(){
+            var a = document.getElementById("1").value;
+            var b = a/100;
+            document.getElementById("2").innerHTML=
+            b + "meters" ;
+        }
+    </script>
+</body>
+</html>

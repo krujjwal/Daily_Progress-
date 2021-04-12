@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="1"></p>
+    <select id="contSelect" onclick="func()">
+        <option>select here</option>
+        <option value="Ind">India</option>
+        <option value="Japan">Japan</option>
+        <option value="Pak">Pakistan</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Aus">Australia</option>
+        <option value="New zealand">New zealand</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="usa">USA</option>
+        <option value="uae">UAE</option>
+        <option value="Canada">Canada</option>
+        <option value="afr">South Africa</option>
+
+    </select>
+    <script>
+        function func() {
+            var a = document.getElementById("contSelect").value;
+            switch(a){
+                case "Ind":
+                    alert(document.getElementById("1").innerHTML="ASIA");
+                    break;
+                    case "Pak":
+                    alert(document.getElementById("1").innerHTML="ASIA");
+                    break;
+                    case "Japan":
+                    alert(document.getElementById("1").innerHTML="ASIA");
+                    break;
+                    case "Brazil":
+                    alert(document.getElementById("1").innerHTML="SOUTH AMERICA");
+                    break;
+                    case "Aus":
+                    alert(document.getElementById("1").innerHTML="Australia");
+                    break;
+                    case "Indonesia":
+                    alert(document.getElementById("1").innerHTML="ASIA");
+                    break;
+                    case "usa":
+                    alert(document.getElementById("1").innerHTML="SOUTH AMERICA");
+                    break;
+                    case "Canada":
+                    alert(document.getElementById("1").innerHTML="SOUTH AMERICA");
+                    break;
+                    case "afr":
+                    alert(document.getElementById("1").innerHTML="AFRICA");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <input id="my input" type="text">
+    <button id="1" onclick="func()">click here to change color</button>
+    <script>
+        function func() {
+            var a = document.getElementById("my input").value;
+            switch(a) {    
+                case "red":
+                    document.getElementById("1").style.color="red";
+                    break;
+                
+                case "blue":
+                    document.getElementById("1").style.color="blue";
+                    break;
+                
+                case "green":
+                    document.getElementById("1").style.color="green";
+                    break;
+                default:
+                    alert(document.getElementById("demo").innerHTML="not any color");
+            }
+        }
+    </script>
+</body>
+</html>
