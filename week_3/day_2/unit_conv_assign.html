@@ -13,29 +13,84 @@
 </head>
 <body>
     <div class="container1">
-        
-            <input id="1" type="number" step="any">
-            <select>
-                <option value="km">Km</option>
+ 
+        <div>
+            <input id="1" type="number" >
+            <select id="2">
+                <option value="km" >Km</option>
                 <option value="m">Meters</option>
                 <option value="mi">Mile</option>
                 <option value="ly">Light year</option>
+                <option value="far">Farenheit</option>
+                <option value="c">celcius</option>
+                <option value="kelvin">kelvin</option>
             </select>
             <span style="padding: 20px;">to</span>
 
-            <input id="" type="number" step="any">
-            <select>
+            <input id="4" type="number" step="any">
+            <select id="3">
                 <option>Km</option>
                 <option>Meters</option>
                 <option>Mile</option>
                 <option>Light year</option>
+                <option value="f">Farenheit</option>
+                <option value="c">celcius</option>
+                <option value="k">kelvin</option>
             </select>
             <button onclick="funcleng()">convert</button>
+        </div>
+            
         
     </div>  
     <script>
         function funcleng(){
             var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            var c = document.getElementById("3").value; 
+            if(b == "km" && c == "Meters"){
+                var d = a/1000;
+                document.getElementById("4").value = d;
+            }
+            else if(b == "km" && c == "Mile") {
+                var d = a*0.6214;
+                document.getElementById("4").value = d;
+            }
+            else if(b == "km" && c == "Light year") {
+                var d = a/(9.46*(10**12));
+                document.getElementById("4").value = d;
+            }
+            else if(b == "m" && c == "Km"){
+                var d = a*1000;
+                document.getElementById("4").value = d;
+            }
+            else if(b == "m" && c == "Mile"){
+                var d = a*0.000621371;
+                document.getElementById("4").value = d;
+            }
+            else if(b == "m" && c == "Light year"){
+                var d = a*0.00000000000000011;
+                document.getElementById("4").value = d;
+            }
+            else if(b == "ly" && c == "Km"){
+                var d = a*300000;
+                document.getElementById("4").value = d;
+            }
+            else if(b == "ly" && c == "Meters"){
+                var d = a*300000000;
+                document.getElementById("4").value = d;
+            }
+            else if(b == "ly" && c == "Mile"){
+                var d = a*(5.879e+12);
+                document.getElementById("4").value = d;
+            }
+            else if(b == "far" && c == "c"){
+                var d = 5/9 * (a-32);
+                document.getElementById("4").value = d;
+            }
+            else if(b == "far" && c == "k"){
+                var d = ((a - 32) * 5/9) + 273.15;
+                document.getElementById("4").value = d;
+            }
             
         }
     </script>  

@@ -10,7 +10,8 @@
     <p id="1"></p>
     <select id="contSelect" onclick="func()">
         <option>select here</option>
-        <option value="Ind">India</option>
+        <option >India</option>
+        <!-- if we dont add value then it will take the value automatically -->
         <option value="Japan">Japan</option>
         <option value="Pak">Pakistan</option>
         <option value="Brazil">Brazil</option>
@@ -27,7 +28,7 @@
         function func() {
             var a = document.getElementById("contSelect").value;
             switch(a){
-                case "Ind":
+                case "India":
                     alert(document.getElementById("1").innerHTML="ASIA");
                     break;
                     case "Pak":

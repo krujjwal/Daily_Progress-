@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="printNumbers(1, 20, true, false)">Odd</button>
+    <button onclick="printNumbers(1, 20, false, true)">Even</button>
+    <script>
+        function printNumbers(start, end, odd, even) {
+    for(i = start; i <= end; i++) {
+    // Checking if the number is odd and if we have to print odd
+       if(i % 2 == 1 && odd) {
+            console.log(i);
+        }
+    
+    // Checking if the number is even and if we have to print even
+        if(i % 2 == 0 && even) {
+            console.log(i);
+        }
+  }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Number1:</p>
+        <input id="1" placeholder="num1">
+        <p>Number2:</p>
+        <input id="2" placeholder="num2">
+        <button onclick="func()">clickHere</button>
+        <button onclick="expo1()">For expo</button>
+        <button onclick="expo2()">For expo</button>
+    </div>
+    <p id="3"></p>
+    <script>
+        function func(){
+            var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            var c = a*b;
+            document.getElementById("3").innerHTML = c;
+        }
+        function expo1() {
+            var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            var c = a**b;
+            document.getElementById("3").innerHTML = c;    
+        }
+        // function expo2() {
+        //     var a = document.getElementById("1").value;
+        //     var b = document.getElementById("2").value;
+        //     for(var i = 0; i<=b; i++){
+        //         if (i == 0){
+        //             var c = 1;
+        //         }
+        //         else
+        //         {
+        //             var c = a * 
+        //         }
+        //     }
+        
+
+    </script>
+</body>
+</html>
