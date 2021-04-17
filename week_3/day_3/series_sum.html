@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="1"></p>
+    <div style="display: flex;">
+        <p>Give a limit : </p>
+        <input id="2" placeholder="Put a limit">
+        <button onclick="func()">clickHere</button>
+    </div>
+    <script>
+        function func(){
+            var a = document.getElementById("2").value; console.log(a);
+            
+            var sum = 0;
+            for (var i=0; i<=a; i++ ){
+                if(i%3==0 && i%5==0){
+                   
+                    sum = sum+i;
+                }
+            }
+            document.getElementById("1").innerHTML= sum;
+        }
+    </script>
+</body>
+</html>

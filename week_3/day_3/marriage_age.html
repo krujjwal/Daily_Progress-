@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+            background-color: darkslateblue;
+            padding: 20px;
+        }
+        .age {
+            width: 50%;
+            padding: 20px;
+            margin-left: 350px;
+            margin-top: 100px;
+            border-radius: 5px;
+            border: 5px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verify Your Marriage Age</h1>
+    <div class="age">
+        <label>Enter Your Marriage Age</label>
+        <input id="ag" placeholder="age" type="text">
+        <button onclick="verify()">Verify here</button>
+        <p id="1"></p>
+    </div>
+    <script>
+        function verify() {
+            var date1 = document.getElementById("ag").value;
+            
+            var date2 = 2021;
+            var c = date2 - date1 ;
+            console.log(c);
+            if (c>18){
+                alert("Valid Date");
+            }
+            else {
+                alert("not valid date");
+            }
+        }
+    </script>
+</body>
+</html>

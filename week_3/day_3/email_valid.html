@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="1" placeholder="email Id" type="email">
+    <button onclick="func()">To check</button>
+    <script>
+        function func(){
+            var a  = document.getElementById("1").value;
+            var b = 0;
+            var c = 0;
+            for ( var i = 0; i<(a.length); i++){
+                
+                console.log(a[i]);
+                if (a[i] == '@'){
+                    b++;
+                }
+                if (a[i] == '.'){
+                    c++; 
+                }
+
+            }
+            if (b == 1 && c == 1){
+                    alert("true email id");
+                }
+                else{
+                    alert("not a valid email id")
+                }
+            
+        }
+    </script>
+</body>
+</html>
