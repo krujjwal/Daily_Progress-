@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assign_css.css" >
+
+</head>
+<body>
+    <div class="class1">
+    <button   onclick="a1()">1</button>
+    <button  onclick="a2()">2</button>
+    <button  onclick="a3()">3</button>
+    <button  onclick="a4()">4</button>
+    <button  onclick="a5()">5</button>
+    <button  onclick="a6()">6</button>
+    <button  onclick="a7()">7</button>
+    <button  onclick="a8()">8</button>
+    <button  onclick="a9()">9</button>
+    <button  onclick="a0()">0</button>
+    <button class="bksp" onclick="bks()">BACKSPACE</button>
+    </div>
+    <div class="class2">
+    <button  onclick="q()">Q</button>
+    <button  onclick="w()">W</button>
+    <button  onclick="e()">E</button>
+    <button  onclick="r()">R</button>
+    <button  onclick="t()">T</button>
+    <button  onclick="y()">Y</button>
+    <button  onclick="u()">U</button>
+    <button  onclick="i()">I</button>
+    <button  onclick="o()">O</button>
+    <button  onclick="p()">P</button>
+    </div>
+    <div class="class3">
+    <button  onclick="a()">A</button>
+    <button  onclick="s()">S</button>
+    <button  onclick="d()">D</button>
+    <button  onclick="f()">F</button>
+    <button  onclick="g()">G</button>
+    <button  onclick="h()">h</button>
+    <button  onclick="j()">J</button>
+    <button  onclick="k()">K</button>
+    <button  onclick="l()">L</button>
+    </div>
+    <div class="class3">
+    <button  onclick="z()">Z</button>
+    <button  onclick="x()">X</button>
+    <button  onclick="c()">C</button>
+    <button  onclick="v()">V</button>
+    <button  onclick="b()">B</button>
+    <button  onclick="n()">N</button>
+    <button  onclick="m()">M</button>
+    <button  onclick="com()">.com</button>
+    </div>
+    <div class="class4">
+    <button id="caps"onclick="caps()" >CAPS</button>
+
+    <button onclick="sp()">SPACE</button>
+    <button onclick="sh()">SHIFT</button>
+    <button onclick="passwrd()">PASSWD</button>
+    <button onclick="reve()">reverse</button>
+    </div>
+    <input id="1" >
+    <p id=""></p>
+    <script>
+        var total = "";
+        var capLocks= false;
+        var shift = false;
+        
+        
+        // var passwd = false;
+        function a(){
+
+            if(capLocks||shift){
+                total = total + "A";
+                document.getElementById("1").value = total;
+                
+            }
+            else{
+
+                total = total + "a";
+                document.getElementById("1").value = total;
+            }
+            
+        }
+        function b(){
+            if(capLocks||shift){
+                total = total + "B";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "b";
+                document.getElementById("1").value = total;
+            }
+
+        }
+        function c(){
+            if(capLocks||shift){
+                total = total + "C";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "c";
+                document.getElementById("1").value = total;
+            }
+
+        }
+        function d(){
+            if(capLocks||shift){
+                total = total + "D";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "d";
+                document.getElementById("1").value = total;
+            }
+        }
+        function e(){
+            if(capLocks||shift){
+                total = total + "E";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "e";
+                document.getElementById("1").value = total;
+            }
+        }
+        function f(){
+            if(capLocks||shift){
+                total = total + "F";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "f";
+                document.getElementById("1").value = total;
+            }
+        }
+        function g(){
+            if(capLocks||shift){
+                total = total + "G";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "g";
+                document.getElementById("1").value = total;
+            }
+        }
+        function h(){
+            if(capLocks||shift){
+                total = total + "H";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "h";
+                document.getElementById("1").value = total;
+            }
+        }
+        function i(){
+            if(capLocks||shift){
+                total = total + "I";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "i";
+                document.getElementById("1").value = total;
+            }
+        }
+        function j(){
+            if(capLocks||shift){
+                total = total + "J";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "j";
+                document.getElementById("1").value = total;
+            }
+        }
+        function k(){
+            if(capLocks||shift){
+                total = total + "K";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "k";
+                document.getElementById("1").value = total;
+            }
+        }
+        function l(){
+            if(capLocks||shift){
+                total = total + "L";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "l";
+                document.getElementById("1").value = total;
+            }
+        }
+        function m(){
+            if(capLocks||shift){
+                total = total + "M";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "m";
+                document.getElementById("1").value = total;
+            }
+        }
+        function n(){
+            if(capLocks||shift){
+                total = total + "N";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "n";
+                document.getElementById("1").value = total;
+            }
+        }
+        function o(){
+            if(capLocks||shift){
+                total = total + "O";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "o";
+                document.getElementById("1").value = total;
+            }
+        }
+        function p(){
+            if(capLocks||shift){
+                total = total + "P";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "p";
+                document.getElementById("1").value = total;
+            }
+        }
+        function q(){
+            if(capLocks||shift){
+                total = total + "Q";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "q";
+                document.getElementById("1").value = total;
+            }
+        }
+        function r(){
+            if(capLocks||shift){
+                total = total + "R";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "r";
+                document.getElementById("1").value = total;
+            }
+        }
+        function s(){
+            if(capLocks||shift){
+                total = total + "S";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "s";
+                document.getElementById("1").value = total;
+            }
+        }
+        function t(){
+            if(capLocks||shift){
+                total = total + "T";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "t";
+                document.getElementById("1").value = total;
+            }
+        }
+        function u(){
+            if(capLocks||shift){
+                total = total + "U";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "u";
+                document.getElementById("1").value = total;
+            }
+        }       
+        function v(){
+            if(capLocks||shift){
+                total = total + "V";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "v";
+                document.getElementById("1").value = total;
+            }
+        } 
+        function w(){
+            if(capLocks||shift){
+                total = total + "W";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "w";
+                document.getElementById("1").value = total;
+            }
+        }
+        function x(){
+            if(capLocks||shift){
+                total = total + "X";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "x";
+                document.getElementById("1").value = total;
+            }
+        }
+        function y(){
+            if(capLocks||shift){
+                total = total + "Y";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "y";
+                document.getElementById("1").value = total;
+            }
+        }
+        function z(){
+            if(capLocks||shift){
+                total = total + "Z";
+                document.getElementById("1").value = total;
+            }
+            else{
+
+                total = total + "z";
+                document.getElementById("1").value = total;
+            }
+        }
+        function a1 (){
+
+            if(shift){
+                total = total+ "!";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "1"
+            document.getElementById("1").value = total;
+            }
+            
+        }
+        function a2(){
+
+            if(shift){
+                total = total+ "@";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "2"
+            document.getElementById("1").value = total;
+            }
+        }
+        function a3(){
+            if(shift){
+                total = total+ "#";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "3"
+            document.getElementById("1").value = total;
+            }
+        }
+        function a4(){
+            if(shift){
+                total = total+ "$";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "4"
+            document.getElementById("1").value = total;
+            }
+        }
+        function a5(){
+            if(shift){
+                total = total+ "%";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "5"
+            document.getElementById("1").value = total;
+            }
+        }  
+        function a6(){
+            if(shift){
+                total = total+ "^";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "6"
+            document.getElementById("1").value = total;
+            }
+        }
+        function a7(){
+            if(shift){
+                total = total+ "&";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "7"
+            document.getElementById("1").value = total;
+            }
+        }
+        function a8(){
+            if(shift){
+                total = total+ "*";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "8"
+            document.getElementById("1").value = total;
+            }
+        }
+        function a9(){
+            if(shift){
+                total = total+ "(";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "9"
+            document.getElementById("1").value = total;
+            }
+        }
+        function a0(){
+            if(shift){
+                total = total+ ")";
+                document.getElementById("1").value = total;
+            }
+            else{
+                total = total + "0"
+            document.getElementById("1").value = total;
+            }
+        }
+        function com(){
+            total = total + ".com"
+            document.getElementById("1").value = total;
+        }
+ 
+        function caps(){
+            if(capLocks){
+                capLocks=false;
+                
+            }
+            else{
+                capLocks=true;
+            }
+        }
+        document.getElementById("caps").addEventListener(click,abcd);
+        function abcd(){
+            document.getElementById("caps").style.background = "orange";
+        }
+
+        function bks(){
+                 var output="";
+            for (var i=0; i<((total.length)-1); i++){
+                output=output+total[i];
+                
+            }
+            total = output;
+        document.getElementById("1").value = output
+        }
+        function sp(){
+            total = total + " ";
+            document.getElementById("1").value = total;
+        }
+
+
+
+        function sh(){
+            if(shift){
+                shift= false;
+            }
+            else{
+                shift=true;
+            }
+        }
+ 
+        function reve() {
+            var t1 = "";
+            for ( var i = (total.length)-1; i>=0; i--){
+                
+                t1 = t1 + total[i];
+                
+            }
+            document.getElementById("1").value = t1;
+            total = t1;
+        }
+        function passwrd() {
+            var t1 = "";
+            for ( var i = 0 ; i<=((total.length)-2);i++){
+                
+                t1 = t1 + "*" ;
+
+                
+            }
+            t1 =  t1  + total[(total.length)-1];
+            document.getElementById("1").value = t1;
+            total = t1;
+        }
+
+    </script>
+</body>
+</html>

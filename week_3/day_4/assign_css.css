@@ -1,0 +1,40 @@
+/* body {
+    width: 900px;
+    background-color: rgb(8, 56, 8);
+    margin-top: 250px;
+    margin-left: 250px;
+    text-align: center;
+    font-size: 80px;
+    
+}
+.bksp{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    color: crimson;
+    background-color: rgb(203, 140, 240);
+} */
+/* .class1 {
+    color: rgb(138, 48, 108);
+    font-size: 80px;
+    background-color: darkslateblue;
+}
+.class2 {
+    color: rgb(138, 48, 108);
+    font-size: 40px;
+    
+    margin-top: 20px;
+} */
+
+
+/* input{
+    margin: 10px;
+} */
+
+body{
+    width: 70%;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 200px;
+    background-color: rgb(13, 156, 56);
+}

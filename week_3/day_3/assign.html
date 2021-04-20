@@ -1,4 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color: blue;
+            width: auto;
+            font-style: italic;
+            text-align: center;
+        }
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: rgb(85, 71, 179); 
+            height: 150px;
+        }
+        .class1{
+            border-radius: 5px;
+            border: 10px solid crimson;
+        }
+        h3{
+            font-style: oblique;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculate Your Tax</h1>
+    <div class="class1">
+        <label>Enter Your Annual Income</label>
+        <input id="1" type="number" placeholder="Total annual income">
+        <label>Enter Your Annual Savings</label>
+        <input id="2" type="number" placeholder="Total annual Savings">
+        <button onclick="totalIn()">Total Income</button>
+        <p id="3"></p>
+        <h3 id="4"></h3>
+        <h2 id="5"></h2>
+    </div>
+    <script>
+        function totalIn() {
+            var a = document.getElementById("1").value;
+            var b = document.getElementById("2").value;
+            var c ;
+            c = Number(a)+ Number(b);
+            console.log(c);
 
+            if (c<= 500000){
+                var d = Number(b) / 2;
+                var total = Number(a) + d;
+                document.getElementById("3").innerHTML = 
+                "Your Total Income :" + total;
+            }
+            else if (c>500000 && c<1000000) {
+                var e = Number(b) ;
+                var d = e * 70/100 ;
+                var total = Number(a) + d;
+                document.getElementById("3").innerHTML = 
+                "Your Total Income :" + total;  
+            }
+            else if (c>=1000000) {
+                var e = Number(b) ;
+                var d = e * 90/100 ;
+                var total = Number(a) + d;
+                document.getElementById("3").innerHTML = 
+                "Your Total Income :" + total;  
+            }
+            if (total<250000){
+                alert("no tax needed");
+            }
+            else if(total>250000 && total<=500000){
+                var tax = total * 10/100 ;
+                document.getElementById("4").innerHTML =
+                "your income tax is =" 
+                document.getElementById("5").innerHTML =
+                + tax; 
+            }
+            else if(total>500000 && total<=1000000){
+                var tax = total * 20/100 ;
+                document.getElementById("4").innerHTML =
+                "your income tax is =" 
+                document.getElementById("5").innerHTML =
+                + tax; 
+            }
+            else {
+                var tax = total * 30/100 ;
+                document.getElementById("4").innerHTML =
+                "your income tax is =" 
+                document.getElementById("5").innerHTML =
+                + tax; 
+            }
+        }
     </script>
 </body>
 </html>
