@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="1" >Click me to change color</button>
+</body>
+    <script>
+
+            document.getElementById("1").onclick = func;
+            var colors = ["green", "blue", "red", "orange", "yellow"]; 
+            var i = 0;
+            function func() {
+            if( i<= (colors.length)){
+                 
+                    document.getElementById("1").style.background = colors[i]; 
+                    i++;
+                } 
+            }
+            // extra added :
+            document.getElementById("1").addEventListener("dblclick",function(){ 
+                // here we have not taken any new function
+                // document.getElementById("1").style.border = "10px solid blue"; we can use ths or:
+                this.style.border = "10px solid blue";
+            })
+
+        
+    </script>
+</html>

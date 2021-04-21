@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="1">click here to change color</button>
+    <script>
+        document.getElementById("1").addEventListener("click",abc);
+        var colors = ["green", "blue", "yellow", "orange" ,"red", "violet","indigo"]
+        var i  =  0;
+        function abc(){
+            if(i<=4){
+                document.getElementById("1").style.background = colors[i];
+                i++;
+                if(i>1){
+                    document.getElementById("1").removeEventListener("click",abc);
+                }
+            }
+        }
+       document.getElementById("1").addEventListener("mouseover",xyz);
+       function xyz() {
+           document.getElementById("1").add
+       }
+    </script>
+</body>
+
+</html>
