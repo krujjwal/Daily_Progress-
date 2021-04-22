@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .even_row {
+            color: white;
+            background-color: black;
+        }
+
+        .odd_row {
+            color: black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <button onclick="createStudents()">Create</button>
+    <script>
+        var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+
+        function createStudents() {
+            // Selecting the parent container
+            var cont = document.getElementById('container');
+  
+             // looping the students list
+            for (i = 0; i < students.length; i++){
+    
+                // creating the student element
+                var element = document.createElement('div')
+                element.textContent = students[i];
+    
+            // setting the attributes based on odd or even criteria
+            if (i % 2 == 0){
+                element.setAttribute('class', 'row even_row')
+            } 
+            else {
+                element.setAttribute('class', 'row odd_row')
+            }
+    
+            // adding the element to the container
+            cont.appendChild(element);
+            }
+  
+        }
+    </script>
+</body>
+</html>

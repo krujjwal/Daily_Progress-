@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 >This is h1</h1>
+    <h3 >This is h3</h3>
+    <h5 >This is h5</h5>
+    <button onclick="seth1()">change h1</button>
+    <button onclick="seth3()">change h3</button>
+    <button onclick="seth5()">change h5</button>
+    <button onclick="changeG()">change green</button>
+    <button onclick="changeB()">change blue</button>
+    <button onclick="changeR()">change red</button>
+    <button onclick="createh1()">create h1</button>
+    <script>
+        function seth1(){
+            var seth1 = document.querySelector('h1');
+            seth1.style.color = 'red';
+        }
+        function seth3(){
+            var seth1 = document.querySelector('h3');
+            seth1.style.color = 'green';
+        }
+        function seth5(){
+            var seth1 = document.querySelector('h5');
+            seth1.style.color = 'blue';
+        }
+        function changeG(){
+            var seth1 = document.querySelector('h1');
+            seth1.style.color = 'green';
+            var seth3 = document.querySelector('h3');
+            seth3.style.color = 'green';
+            var seth5 = document.querySelector('h5');
+            seth5.style.color = 'green';
+        }
+        function changeR(){
+            var seth1 = document.querySelector('h1');
+            seth1.style.color = 'red';
+            var seth3 = document.querySelector('h3');
+            seth3.style.color = 'red';
+            var seth5 = document.querySelector('h5');
+            seth5.style.color = 'red';
+        }
+        function changeB(){
+            var seth1 = document.querySelector('h1');
+            seth1.style.color = 'blue';
+            var seth3 = document.querySelector('h3');
+            seth3.style.color = 'blue';
+            var seth5 = document.querySelector('h5');
+            seth5.style.color = 'blue';
+        }
+        function createh1(){
+            var crh1 = document.createElement('h1');
+            crh1.innerHTML = "<h1>masai</h1>";
+            var bodyelem =  document.querySelector('body');
+            bodyelem.appendChild(crh1);
+        }
+    </script>
+</body>
+</html>
