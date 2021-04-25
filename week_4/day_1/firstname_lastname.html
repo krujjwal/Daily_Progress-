@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin: 200px;">
+        <div>
+            MAX:<input id="1">
+            MIN:<input id="2">
+            Number: <input id="3">
+            <p id="4"></p>
+        </div>
+        <div style="margin: 40px; margin-left: 200px;">
+            <div>
+                <button id="1" onclick="fun1()">1</button>
+                <button id="2" onclick="fun2()">2</button>
+                <button id="3" onclick="fun3()">3</button>
+            </div>
+            <div>
+                <button id="4" onclick="fun4()">4</button>
+                <button id="5" onclick="fun5()">5</button>
+                <button id="6" onclick="fun6()">6</button>
+            </div>
+            <div>
+                <button id="7" onclick="fun7()">7</button>
+                <button id="8" onclick="fun8()">8</button>
+                <button id="9" onclick="fun9()">9</button>
+            </div>
+            <div style="margin-left: 35px;">
+                <button onclick="funEn()">ENTER</button>
+            </div>
+            <div style="margin-left: 35px;">
+                <button onclick="revAll()">Remove All</button>
+            </div>
+            <div>
+                <button onclick="remEven">remove Even</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var total =  "";
+        var a = [];
+        function fun1(){
+            total =  total + "1";
+            document.getElementById("3").value = total;
+        }
+        function fun2(){
+            total =  total + "2";
+            document.getElementById("3").value = total;
+        }
+        function fun3(){
+            total =  total + "3";
+            document.getElementById("3").value = total;
+        }
+        function fun4(){
+            total =  total + "4";
+            document.getElementById("3").value = total;
+        }
+        function fun5(){
+            total =  total + "5";
+            document.getElementById("3").value = total;
+        }
+        function fun6(){
+            total =  total + "6";
+            document.getElementById("3").value = total;
+        }
+        function fun7(){
+            total =  total + "7";
+            document.getElementById("3").value = total;
+        }
+        function fun8(){
+            total =  total + "8";
+            document.getElementById("3").value = total;
+        }
+        function fun9(){
+            total =  total + "9";
+            document.getElementById("3").value = total;
+        }
+        function funEn(){
+           
+
+            a.push(total);
+            
+            var cont = document.getElementById("4");
+            for(var i = 0 ; i<a.length; i++){
+                var element = document.createElement('p')
+                element.textContent = "game"+ (i+1)+ " " + a[i];
+                cont.appendChild(element);
+
+
+            }
+            var p = document.getElementById("3").value;
+            var q = document.getElementById("1").value;
+            var r = document.getElementById("2").value;
+            if(p>q){
+                document.getElementById("1").value = p;
+            }
+            else{
+                document.getElementById("2").value =p;
+            }
+            total = "";
+        }
+        function revAll(){
+            var bodyElem = document.querySelector('body');
+            var firstDiv = document.querySelector("#1");
+            var div2 = document.querySelector("#2");
+            var div3 = document.querySelector("#3");
+            bodyElem.removeChild(firstDiv);  
+            bodyElem.removeChild(div2);  
+            bodyElem.removeChild(div3);
+            for(var i = 0 ; i<a.length; i++){
+                  a.pop(i)
+                   
+                }
+                console.log(a);
+        }
+        function remEven(){
+            for(var i = 0 ; i<a.length; i++){
+                var element = document.createElement('p')
+                element.textContent = "game"+ (i+1)+ " " + a[i];
+                cont.appendChild(element);
+
+
+            }
+        }
+    </script>
+</body>
+</html>
