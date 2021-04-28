@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="1">
+    <button onclick="fun()">ENTER</button>
+    <button onclick="evenS()">EVEN POSITION SUM</button>
+    <button onclick="oddS()">ODD POSITION SUM</button>
+    <p id="2"></p>
+    <p id="3"></p>
+    <script>
+        var total = 0;
+        var a = [];
+        function fun(){
+            total = document.getElementById("1").value;
+            console.log(total);
+            a.push(total);
+            document.getElementById("1").value = 0;
+            console.log(a);
+            total = 0;
+
+        }
+        
+        function evenS(){
+            var eSum = 0;
+            for ( var i = 0; i<a.length; i++){
+                if(i%2==0){
+                    eSum = (eSum) + Number(a[i]);
+                   
+                }
+            }
+            document.getElementById("2").innerHTML = "Even position sum is" + eSum;
+        }
+        function oddS(){
+            var oSum = 0;
+            for ( var i = 0; i<a.length; i++){
+                if(i%2==1){
+                    oSum = (oSum) + Number(a[i]);
+                   
+                }
+            }
+            document.getElementById("3").innerHTML = "Odd position sum is" + oSum;
+        }
+    </script>
+</body>
+</html>

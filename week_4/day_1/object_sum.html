@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="1">
+    <button onclick="fun()">ENTER</button>
+    <button onclick="evenS()">EVEN POSITION SUM</button>
+    <button onclick="oddS()">ODD POSITION SUM</button>
+    <button id="printPersonBtn">click here</button>
+    <div id="personContainer"></div>
+    <p id="2"></p>
+    <p id="3"></p>
+    <script>
+        
+        var total = document.getElementById("1").value;
+        var a = [];
+        a = total;
+        console.log(total);
+        console.log(a[6]);
+        function fun(){    
+        
+        // console.log(total);
+        // document.getElementById("2").innerHTML = a;
+        }
+        var person = {
+             hobbies: a
+        }
+            
+                function printPerson(){
+                    var outputText = person.hobbies[5];
+                    console.log(outputText);
+    
+                var outputPara = document.createElement('p')
+                outputPara.textContent = outputText
+    
+                var container = document.querySelector('#personContainer')
+                container.appendChild(outputPara)
+    
+                }
+
+            var personButton = document.querySelector('#printPersonBtn')
+            personButton.addEventListener('click', printPerson)
+
+        
+    </script>
+</body>
+</html>

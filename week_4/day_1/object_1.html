@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="printM">Movie1</button>
+    <button id="pMovie2">Movie2</button>
+    <button id="pMovie3">Movie3</button>
+    <button id="pMovie4">Movie4</button>
+    <button id="pMovie5">Movie5</button>
+    <button id="addItem">add key</button>
+    <div id="movieContainer"></div>
+    <script>
+        var movie1 = {
+            name : "harry potter 1",
+            director : "Chris Columbus",
+            year : 2001,
+            rating : 8.5,
+            cast : 	"Daniel Radcliffe, Rupert Grint and Emma Watson"
+        }
+        var movie2 = {
+            name : "Harry Potter and the Chamber of Secrets ",
+            director : "Chris Columbus",
+            year : 2002,
+            rating : 8.1,
+            cast : 	"Daniel Radcliffe, Rupert Grint and Emma Watson"
+        }
+        var movie3 = {
+            name : "Harry Potter and the Prisoner of Azkaban ",
+            director : "Chris Columbus",
+            year : 2004,
+            rating : 8.9,
+            cast : 	"Daniel Radcliffe, Rupert Grint and Emma Watson"
+        }
+        var movie4 = {
+            name : "Harry Potter and the Goblet of Fire  ",
+            director : "Chris Columbus",
+            year : 2005,
+            rating : 8.9,
+            cast : 	"Daniel Radcliffe, Rupert Grint and Emma Watson"
+        }
+        var movie5 = {
+            name : "Harry Potter and the Order of the Phoenix  ",
+            director : "Chris Columbus",
+            year : 2007,
+            rating : 8.9,
+            cast : 	"Daniel Radcliffe, Rupert Grint and Emma Watson"
+        }
+        
+        
+        function mov(){
+            var outputText = "Movie name is " + movie1.name + "."
+                        + "Directed by" + movie1.director + "."
+                        + "The movie released in " + movie1.year + "."
+                        + "It is rated " + movie1.year + "."
+                        + "The cast of the movies are " + movie1.cast + ".";
+
+        var outputPara = document.createElement('p')
+        outputPara.textContent = outputText
+  
+        var container = document.querySelector('#movieContainer')
+        container.appendChild(outputPara)
+        }
+        var mButton =  document.querySelector('#printM')
+        mButton.addEventListener('click', mov)
+
+        function mov2(){
+            var outputText = "Movie name is " + movie2.name + "."
+                        + "Directed by" + movie2.director + "."
+                        + "The movie released in " + movie2.year + "."
+                        + "It is rated " + movie2.year + "."
+                        + "The cast of the movies are " + movie2.cast + ".";
+
+        var outputPara = document.createElement('p')
+        outputPara.textContent = outputText
+  
+        var container = document.querySelector('#movieContainer')
+        container.appendChild(outputPara)
+        }
+        var mButton =  document.querySelector('#pMovie2')
+        mButton.addEventListener('click', mov2)
+
+        function mov3(){
+            var outputText = "Movie name is " + movie3.name + "."
+                        + "Directed by" + movie3.director + "."
+                        + "The movie released in " + movie3.year + "."
+                        + "It is rated " + movie3.year + "."
+                        + "The cast of the movies are " + movie3.cast + ".";
+
+        var outputPara = document.createElement('p')
+        outputPara.textContent = outputText
+  
+        var container = document.querySelector('#movieContainer')
+        container.appendChild(outputPara)
+        }
+        var mButton =  document.querySelector('#pMovie3')
+        mButton.addEventListener('click', mov3)
+        
+        function mov4(){
+            var outputText = "Movie name is " + movie4.name + "."
+                        + "Directed by" + movie4.director + "."
+                        + "The movie released in " + movie4.year + "."
+                        + "It is rated " + movie4.year + "."
+                        + "The cast of the movies are " + movie4.cast + ".";
+
+        var outputPara = document.createElement('p')
+        outputPara.textContent = outputText
+  
+        var container = document.querySelector('#movieContainer')
+        container.appendChild(outputPara)
+        }
+        var mButton =  document.querySelector('#pMovie4')
+        mButton.addEventListener('click', mov4)
+
+        function mov5(){
+            var outputText = "Movie name is " + movie5.name + "."
+                        + "Directed by" + movie5.director + "."
+                        + "The movie released in " + movie5.year + "."
+                        + "It is rated " + movie5.year + "."
+                        + "The cast of the movies are " + movie5.cast + ".";
+
+        var outputPara = document.createElement('p')
+        outputPara.textContent = outputText
+  
+        var container = document.querySelector('#movieContainer')
+        container.appendChild(outputPara)
+        }
+        var mButton =  document.querySelector('#pMovie5')
+        mButton.addEventListener('click', mov5)
+
+        function addP (){
+            movie1.favActor = "Daniel Radcliff ",
+            movie1.name = "Harry Potter and the Half-Blood Prince ",
+            movie1.year = 2007;
+            var outputText =  "Movie name is" + movie1.name + "." +
+                            + "Directed by" + movie1.director + "." +
+                            +"the movie released in " + movie1.year + "."
+                            + "fav actor is" + movie1.favActor + ".";
+        
+            var outputPara = document.createElement('p')
+            outputPara.textContent = outputText
+  
+            var container = document.querySelector('#movieContainer')
+            container.appendChild(outputPara)
+        }
+        var add = document.querySelector('#addItem')
+        add.addEventListener('click',addP);
+    </script>
+</body>
+</html>

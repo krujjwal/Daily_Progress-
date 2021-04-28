@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainDiv">
+        <div class="firstDiv">
+            <button onclick="customer_details()">Click here for Customer Details</button>
+            <div id="display_details"></div>
+        </div>
+        <div id="secondDiv">
+            <label for="Firstname">FIRST NAME :</label>
+            <input type="text" class="personinput">
+
+            <label for="lName"> LAST NAME</label>
+            <input type="text" class="personinput">
+
+            <label for="DOB">Date of Birth</label>
+            <input type="date" class="personinput">
+
+            <label for="balance">BALANCE</label>
+            <input type="text" class="personinput">
+
+            <label for="SharedAcountHolder">Shared Acount Holder</label>
+            <input type="text" class="personinput">
+
+            <label for = "submit">Submit Information:</label>
+            <button id="summit">Summit</button>
+
+            <label for = "displayPeople">Display All People</label>
+            <button id="displayBtn">Display All People</button>
+        </div>
+        <div class="thirdDiv" id="newPerson">
+            <h1>New Person Details</h1>
+            <div class="newPara"></div>
+        </div>
+    </div>
+    <script>
+        var customer = {
+            firstname :  "Ujjwal",
+            lname : "kumar",
+            dateofbirth :  "16/05/1995",
+            balances : 10000,
+            account : 28739839,
+            sharedaccountholder : ["FATHER","MOTHER"],
+            getDetails : function(){
+                var output = ""
+                for(key in this){
+                    output =  output + key +  ":" +  customer[key] + "\n"
+                    if(key=="sharedaccountholder"){
+                        break;
+                    }
+                }
+                return output
+            } 
+        }
+
+
+        function customer_details(){
+            var  outputText  =  customer.getDetails()
+
+            var  outputPara =  document.createElement('p')
+            outputPara.textContent = outputText
+
+            var container = document.querySelector('#display_details')
+            container.appendChild(outputPara);
+
+        }
+
+        function  newCustomer(Firstname,Lastname,dateofbirth,balance,Accountnumber,sharedaccountholder){
+            this.Firstname = Firstname;
+            this.Lastname = Lastname;
+            this.dateofbirth =  dateofbirth;
+            this.balance = balance;
+            this.Accountnumber = Accountnumber;
+            this.sharedaccountholder = sharedaccountholder;
+            this.getDetails =  function(){
+                var  output = "";
+                for(key  in this){
+                    output =  output+key+":"+this[key]+"\n"
+                    if(key=='sharedaccountholder'){
+                        break;
+                    }
+                }
+                return output;
+            
+            }
+        }
+
+        var  inputCustomerDetails = [];
+        // This array contains all the Person Objects!
+
+//This is the function that creates a person object and pushes that object into the inputCustomerDetails
+        function createperson(){
+            var inputs = document.querySelectorAll('.personInput')
+            var newPerson = new newCustomer();
+            
+            var i = 0 
+            for(key in newPerson){
+                if(newPerson[key] == undefined){
+                if(key != 'SharedAccountHolders')  {
+                    newPerson[key] = inputs[i].value 
+                }
+                else {
+                    newPerson[key] = inputs[i].value.split(',')
+                }
+                inputs[i].value = ''
+                i++
+                }
+            }
+            inputcustomer_details.push(newPerson)
+        } 
+        
+        function displayall(){
+            console.log(inputCustomerDetails)
+            var  displayContainer = document.querySelector('.newPara')
+            alert("ho")
+            displayContainer.innerHTML = ''
+            for(var i = 0; i < inputCustomerDetails.length;i++){
+                var displayPara = document.createElement('p')
+                displayPara.setAttribute('id','ptag')
+                displayPara.textContent = inputCustomerDetails[i].getDetails() 
+                displayContainer.appendChild(displayPara) 
+            }
+
+        }
+        var summit =  document.querySelector('#summit')
+        summit.addEventListener('click',createperson)
+
+
+        var displayBtn = document.querySelector('#displayBtn')
+        displayBtn.addEventListener('click',displayall)
+        
+    </script>
+</body>

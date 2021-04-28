@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="1">
+    <button onclick="fun()">ENTER</button>
+    <button onclick="evenS()">EVEN POSITION SUM</button>
+    <button onclick="oddS()">ODD POSITION SUM</button>
+    <button  onclick="eSum()">EVEN SUM</button>
+    <p id="2"></p>
+    <p id="3"></p>
+    <script>
+        var a = []
+        function fun(){
+        var total = document.getElementById("1").value;
+        var p = "";
+        
+        for(var i = 0; i<total.length;i++){
+            if(total[i]== ','){
+                a.push(p);
+                p = "";
+            }
+            else {
+                // a.push(total[i]);
+                p = p + total[i];
+                
+            }
+            console.log(a);
+             }
+        }
+        function evenS (){
+
+            var  esum  = 0;
+            for(var i=0;  i<a.length; i++){
+                if(i%2==0){
+                    var esum = Number(a[i]) + esum;  
+                }
+            }
+            document.getElementById("2").innerHTML =  esum;
+        }
+        function oddS (){
+
+            var  odds  = 0;
+            for(var i=0;  i<a.length; i++){
+                if(i%2==1){
+                    var odds = Number(a[i]) + odds;  
+                }
+            }
+            document.getElementById("2").innerHTML =  odds;
+        }
+        function eSum(){
+            var even =  0;
+            for(var i=0; i<a.length;i++){
+                if((Number(a[i]))%2==0){
+                    even  =  even + Number(a[i]);
+                }
+            }
+            document.getElementById("3").innerHTML = even;
+        }
+    </script>
+</body>
+</html>
