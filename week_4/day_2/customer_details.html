@@ -14,19 +14,19 @@
         </div>
         <div id="secondDiv">
             <label for="Firstname">FIRST NAME :</label>
-            <input type="text" class="personinput">
+            <input type="text"name="name" class="personinput">
 
             <label for="lName"> LAST NAME</label>
-            <input type="text" class="personinput">
+            <input type="text" name="Age" class="personinput">
 
             <label for="DOB">Date of Birth</label>
-            <input type="date" class="personinput">
+            <input type="date" name="height" class="personinput">
 
             <label for="balance">BALANCE</label>
-            <input type="text" class="personinput">
+            <input type="text" name="gender" class="personinput">
 
             <label for="SharedAcountHolder">Shared Acount Holder</label>
-            <input type="text" class="personinput">
+            <input type="text" name="name" class="personinput">
 
             <label for = "submit">Submit Information:</label>
             <button id="summit">Summit</button>
@@ -96,10 +96,10 @@
 
 //This is the function that creates a person object and pushes that object into the inputCustomerDetails
         function createperson(){
-            var inputs = document.querySelectorAll('.personInput')
+            var inputs = document.querySelectorAll('.personinput')
             var newPerson = new newCustomer();
             
-            var i = 0 
+            var i = 0 ;
             for(key in newPerson){
                 if(newPerson[key] == undefined){
                 if(key != 'SharedAccountHolders')  {
@@ -108,11 +108,11 @@
                 else {
                     newPerson[key] = inputs[i].value.split(',')
                 }
-                inputs[i].value = ''
-                i++
+                inputs[i].value = '';
+                i++;
                 }
             }
-            inputcustomer_details.push(newPerson)
+            inputCustomerDetails.push(newPerson)
         } 
         
         function displayall(){

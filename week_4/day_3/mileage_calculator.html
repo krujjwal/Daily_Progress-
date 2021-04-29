@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class="mainDiv">
+        <div>
+            <!-- <label for="pFuel">Previous Fuel</label>
+            <input type="text" class="personinput" id="pFuel"> -->
+
+            <label for="Date">Date of Trip</label>
+            <input type="date" class="personinput" id="date">
+
+            <label for="fuelF">Fuel Filed </label>
+            <input type="text" class="personinput" id="fuelF">
+
+            <label for="tripD">Trip Distance</label>
+            <input type="text" class="personinput" id="tripD">
+
+            <button id="summit">Summit</button>
+            <button id="displayall">Display details</button>
+        </div>
+
+        <div id="thirdDiv">
+            <h2>Overall Distance</h2>
+            <div class="newPara"></div>
+        </div>
+
+        <h2>calculations</h2>
+        <div>
+            <h4>total Fuel</h4>
+            <p id="1">0</p>
+            <p>km</p>
+        </div>
+        <div>
+            <h4>totaldistance</h4>
+            <p id="2"> 0</p>
+        </div>
+        <div>
+            <h4>total vehicle can go</h4>
+            <p id="3">0</p>
+            <p>km</p>
+        </div>
+    </div>
+
+    <script>
+        var summit =  document.querySelector('#summit')
+        summit.addEventListener('click',createperson) 
+
+        var displayBtn = document.querySelector('#displayall')
+        displayBtn.addEventListener('click',displayAll)
+
+        function fuelDetails(date,Fuelfilled,tripDistance){
+            // this.PreviousFuel = PreviousFuel;
+            this.date = date;
+            this.Fuelfilled = Fuelfilled;
+            this.tripDistance =  tripDistance;
+            
+            this.getDetails = function(){
+                var output =  ''
+                for(key in this){
+                    output = output + key + ":"+"-"+" " + this[key] + "\n"
+                    if(key=="tripDistance"){
+                        break;
+                    }
+                }
+                return output;
+                
+            } 
+        }
+        var arr =  [];
+
+        function  createperson(){
+            var inputs = document.querySelectorAll('.personinput');
+            var newPerson = new fuelDetails();
+            var i =  0;
+            // console.log(inputs);
+            for(key in newPerson){
+                if(newPerson[key]==undefined){
+                    if(key != 'tripDistance'){
+                        newPerson[key] = inputs[i].value
+                    }
+                    else{
+                        newPerson[key] = inputs[i].value.split(',')
+                    }
+                    inputs[i].value = "";
+                    i++;
+                }
+            }
+            arr.push(newPerson);
+
+            var beforeF = document.getElementById("1").textContent;
+            var previousD = document.getElementById("2").textContent;
+            var disCanMove = document.getElementById("3").textContent;
+            
+            var fuelAdded = Number(newPerson.Fuelfilled)
+            var tripD = Number(newPerson.tripDistance)
+
+            var a = Number(beforeF) + Number(fuelAdded);
+            var b = Number(previousD) + Number(tripD) ;
+            
+           
+
+            document.getElementById("1").innerHTML = a;
+            document.getElementById("2").innerHTML = b;     
+            document.getElementById("3").innerHTML = (a*20)-b;
+        }
+
+        function  displayAll(){
+            var display = document.querySelector('.newPara')
+
+            display.innerHTML = ''
+            for(var i=0; i<arr.length; i++){
+                var displayPara = document.createElement('p')
+                displayPara.setAttribute('id','ptag')
+                displayPara.textContent =  (arr[i].getDetails())+"\n"
+                display.appendChild(displayPara);
+            }
+        }
+    </script>
+</body>
+</html>
