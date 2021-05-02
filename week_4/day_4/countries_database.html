@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex;">
+        <div style="display: flex; flex-direction: column; width: 200px;">
+            Name:<input class="class1">
+            Population:<input class="class1">
+            GDP:<input class="class1">
+            Life Expectancy:<input class="class1">
+            Languages:<input class="class1">
+        </div>
+        <div id="tdiv" style="margin-left: 100px;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>Population</th>
+                        <th>GDP</th>
+                        <th style="text-align: center;">LIFE Expectancy</th>
+                        <th>Languages</th>
+                    </tr>
+                </thead>
+                    <tbody class="tablebody" id="tab">
+                        
+                    </tbody>
+            </table>
+        </div>
+    </div>
+        <button onclick="createperson()">SUMMIT</button>
+        <button onclick="displayAll()">Display</button>
+        <div>
+        <div>
+             Population<input type="checkbox" id="Hp">
+             GDP<input type="checkbox" id="gd">
+            LANGUAGE<input type="checkbox" id="Lan">
+            NAME<input type="checkbox" id="name">
+        </div>
+        <button onclick="filter()">Filter</button>
+        <input id="filter1">
+        </div>
+    
+    <script>
+
+        function  newCustomer(Name,Population,GDP,LifeExpectancy,Languages){
+            this.Name = Name;
+            this.Population = Population;
+            this.GDP =  GDP;
+            this.LifeExpectancy = LifeExpectancy;
+            this.Languages = Languages;
+            this.getDetails =  function(){
+                var  output = "";
+                for(key  in this){
+                    output =  this[key]
+                    if(key=='sharedaccountholder'){
+                        break;
+                    }
+                }
+                return output;
+            
+            }
+        }
+        
+        var arr  = [];
+        var a =0;
+        function createperson(){
+            var inputs = document.querySelectorAll('.class1')
+            var newPerson = new newCustomer();
+
+            var i = 0 ;
+            for(key in newPerson){
+                if(newPerson[key] == undefined){
+                if(key != 'Languages')  {
+                    newPerson[key] = inputs[i].value 
+                }
+                else {
+                    newPerson[key] = inputs[i].value.split(',')
+                }
+                inputs[i].value = '';
+                i++;
+                }
+            }
+            arr.push(newPerson);
+            console.log(arr)
+            
+            
+            
+            var table = document.querySelector('.tablebody')
+            var createtr = document.createElement('tr')
+            createtr.setAttribute('id',a)
+            table.appendChild(createtr)
+
+            var selecttr1 = document.getElementById(a)
+            var cretetd1 =  document.createElement('td')
+            cretetd1.textContent = arr[a].Name
+            selecttr1.appendChild(cretetd1)
+
+            var selecttr2 = document.getElementById(a)
+            var cretetd2 =  document.createElement('td')
+            cretetd2.textContent = arr[a].Population
+            selecttr2.appendChild(cretetd2)
+
+            var selecttr3 = document.getElementById(a)
+            var cretetd3 =  document.createElement('td')
+            cretetd3.textContent = arr[a].GDP
+            selecttr3.appendChild(cretetd3)
+
+            var selecttr4 = document.getElementById(a)
+            var cretetd4 =  document.createElement('td')
+            cretetd4.textContent = arr[a].LifeExpectancy
+            selecttr4.appendChild(cretetd4)
+
+            var selecttr5 = document.getElementById(a)
+            var cretetd5 =  document.createElement('td')
+            cretetd5.textContent = arr[a].Languages
+            selecttr5.appendChild(cretetd5)
+        
+            a++;
+        }
+        function filter(){
+            // for(var i =0;i<arr.length;i++){
+            //     var list =document.getElementById("tab")
+            //     var sel = document.getElementById(i)
+            //     list.removeChild(sel);
+            // }
+
+            for(var i =0;i<arr.length;i++){
+                // var list =document.getElementById("tab")
+                var sel = document.getElementById(i)
+                sel.remove();
+            }
+
+
+
+            var a = document.getElementById('Hp').checked;
+            if(a==true){
+                var pop = document.getElementById('filter1').value
+                var arrP = [];
+                for(var i=0; i<arr.length;i++){
+                    if(arr[i].Population>=pop){
+                        var table = document.querySelector('.tablebody')
+                        var createtr = document.createElement('tr')
+                        createtr.setAttribute('id',i)
+                        table.appendChild(createtr)
+
+                        var selecttr1 = document.getElementById(i)
+                        var cretetd1 =  document.createElement('td')
+                        cretetd1.textContent = arr[i].Name
+                        selecttr1.appendChild(cretetd1)
+
+                        var selecttr2 = document.getElementById(i)
+                        var cretetd2 =  document.createElement('td')
+                        cretetd2.textContent = arr[i].Population
+                        selecttr2.appendChild(cretetd2)
+
+                        var selecttr3 = document.getElementById(i)
+                        var cretetd3 =  document.createElement('td')
+                        cretetd3.textContent = arr[i].GDP
+                        selecttr3.appendChild(cretetd3)
+
+                        var selecttr4 = document.getElementById(i)
+                        var cretetd4 =  document.createElement('td')
+                        cretetd4.textContent = arr[i].LifeExpectancy
+                        selecttr4.appendChild(cretetd4)
+
+                        var selecttr5 = document.getElementById(i)
+                        var cretetd5 =  document.createElement('td')
+                        cretetd5.textContent = arr[i].Languages
+                        selecttr5.appendChild(cretetd5)
+        
+            
+                    }
+                    
+                }
+                
+            }
+            var b = document.getElementById('gd').checked;
+            if(b==true){
+                var gdpp = document.getElementById('filter1').value
+                
+                for(var i=0; i<arr.length;i++){
+                    if(arr[i].GDP>=gdpp){
+                        var table = document.querySelector('.tablebody')
+                        var createtr = document.createElement('tr')
+                        createtr.setAttribute('id',i)
+                        table.appendChild(createtr)
+
+                        var selecttr1 = document.getElementById(i)
+                        var cretetd1 =  document.createElement('td')
+                        cretetd1.textContent = arr[i].Name
+                        selecttr1.appendChild(cretetd1)
+
+                        var selecttr2 = document.getElementById(i)
+                        var cretetd2 =  document.createElement('td')
+                        cretetd2.textContent = arr[i].Population
+                        selecttr2.appendChild(cretetd2)
+
+                        var selecttr3 = document.getElementById(i)
+                        var cretetd3 =  document.createElement('td')
+                        cretetd3.textContent = arr[i].GDP
+                        selecttr3.appendChild(cretetd3)
+
+                        var selecttr4 = document.getElementById(i)
+                        var cretetd4 =  document.createElement('td')
+                        cretetd4.textContent = arr[i].LifeExpectancy
+                        selecttr4.appendChild(cretetd4)
+
+                        var selecttr5 = document.getElementById(i)
+                        var cretetd5 =  document.createElement('td')
+                        cretetd5.textContent = arr[i].Languages
+                        selecttr5.appendChild(cretetd5)
+        
+            
+                    }
+                    
+                }
+                
+            }
+
+            var c = document.getElementById('Lan').checked;
+            if(c==true){
+                var lan = document.getElementById('filter1').value
+                
+                for(var i=0; i<arr.length;i++){
+                    if(arr[i].Languages=lan){
+                        var table = document.querySelector('.tablebody')
+                        var createtr = document.createElement('tr')
+                        createtr.setAttribute('id',i)
+                        table.appendChild(createtr)
+
+                        var selecttr1 = document.getElementById(i)
+                        var cretetd1 =  document.createElement('td')
+                        cretetd1.textContent = arr[i].Name
+                        selecttr1.appendChild(cretetd1)
+
+                        var selecttr2 = document.getElementById(i)
+                        var cretetd2 =  document.createElement('td')
+                        cretetd2.textContent = arr[i].Population
+                        selecttr2.appendChild(cretetd2)
+
+                        var selecttr3 = document.getElementById(i)
+                        var cretetd3 =  document.createElement('td')
+                        cretetd3.textContent = arr[i].GDP
+                        selecttr3.appendChild(cretetd3)
+
+                        var selecttr4 = document.getElementById(i)
+                        var cretetd4 =  document.createElement('td')
+                        cretetd4.textContent = arr[i].LifeExpectancy
+                        selecttr4.appendChild(cretetd4)
+
+                        var selecttr5 = document.getElementById(i)
+                        var cretetd5 =  document.createElement('td')
+                        cretetd5.textContent = arr[i].Languages
+                        selecttr5.appendChild(cretetd5)
+        
+            
+                    }
+                    
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>
