@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select">
+        <option value="1">page1</option>
+        <option value="2">page2</option>
+        <option>page3</option>
+        <option>page4</option>
+        <option>page5</option>
+    </select>
+    <p id="em"></p>
+    <button onclick="fun()">SUBMIT</button>
+    <script>
+
+        function fun(){
+        var a = document.getElementById("select").value;
+                var xhr =  new XMLHttpRequest();
+
+        xhr.open('GET','https://reqres.in/api/users?page='+a);
+        xhr.send()
+        
+        xhr.onload = function(){
+            if (xhr.status == 200){
+                var regularObject = JSON.parse(xhr.response)
+                
+                regularObject.data.map((function(element){
+                    a= element.email;
+                    
+                    document.getElementById("em").innerHTML = element.email; 
+                }))
+            }
+            else{
+                console.log("error code is:"+xhr.status)
+            }
+        }
+        
+    }
+   
+    </script>
+</body>
+</html>
