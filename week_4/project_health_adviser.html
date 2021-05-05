@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 10px solid crimson; width:600px; text-align: center; height: 700px; margin-left: 320px; display: flex; flex-direction: column;">
+        <h1>Calorie calculator</h1>
+    <div style="display: flex;  margin-left: 120px; margin-top: 100px;">
+        
+        <div>
+            <h3> Calorie Intake</h3>
+            <select id="calIn">
+                <option value="0">Calories In</option>
+                <option value="200" >Juice</option>
+                <option value="600">Tea</option>
+                <option value="200">Bread</option>
+                <option value="800">Breakfast</option>
+                <option value="1600">Lunch</option>
+                <option value="1200">Dinner</option>
+            </select>
+        </div>
+        <div style="margin-left: 100px;">
+            <h3>Calorie Spend</h3>
+            <select id="calSpend">
+                <option value="0">Calories Spend</option>
+                <option value="700">Cycling</option>
+                <option value="600">30 mins running</option>
+                <option value="400">30 mins walking</option>
+                <option value="700">30 mins Gym</option>
+                <option value="800">1 hr Gym</option>
+            </select>
+        </div>
+    </div>  
+    <button style="margin: 20px; height: 40px; width: 400px; margin-left: 100px;" onclick="sub()">SUBMIT</button>
+    <div>  
+        <div style="margin: 10px; height: 40px; width: 400px; margin-left: 100px;"></div>
+            <h3>Total Calories Lose or Gain</h3>
+            <input id="1">
+        </div>
+        <div style="margin: 20px; height: 40px; width: 400px; margin-left: 100px;">
+            <h3>Total Fat Lose or Gain</h3>
+            <input id="2">
+        </div>
+    </div>
+    </div>
+    
+    <script>
+        function sub(){
+            calin = 0;
+            calout = 0;
+            totalC = 0;
+            var calin = document.getElementById("calIn").value;
+            var calout = document.getElementById("calSpend").value;
+            var totalC = calin - calout;
+            if(totalC<0){
+                document.getElementById("1").value = (totalC*-1)+"lose";
+            }
+            else{
+                document.getElementById("1").value = totalC +"gain";
+            }
+
+            var fat =0;
+            if(totalC<0){
+                var a = (totalC*-1)*-1*0.00014
+                var num1 = a.toFixed(2);
+                document.getElementById("2").value = num1+"fat lose";
+            }
+            else{
+                var a = (totalC*-1)*-1*0.00014
+                var num1 = a.toFixed(2);
+                document.getElementById("2").value = num1+"fat gain";
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>
