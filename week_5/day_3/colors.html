@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <h1 id="h1">HELLO</h1>
+    <h2 id="h2">WORLD</h2>
+    <h3 id="h3">INDIA</h3>
+    <h4 id="h4" class="green">FACEBOOK</h4>
+    <div id="d1">First Div </div>
+    <div id="d2">Second Div</div>
+    <div id="d3">Third Div</div>
+    <p id="p1">First Paragraph</p>
+    <p id="p2" class="green">Second Paragraph</p>
+    <p id="p3">Third Paragraph</p>
+    <h1 class="Jh1 border border-success" id="jqh1">JQUERY</h1>
+
+    <button type="button" class="btn btn-primary" id="b1">CHANGE H1</button>
+    <button type="button" class="btn btn-secondary" id="b2">CHANGE H2</button>
+    <button type="button" class="btn btn-success" id="b3">CHANGE H3</button>
+    <button type="button" class="btn btn-danger" id="b4">CHANGE DIV</button>
+    <button type="button" class="btn btn-warning" id="b5">CHNAGE PARA</button>
+    <button type="button" class="btn btn-info" id="b6">CHANGE TO GREEN</button>
+    <button type="button" class="btn btn-dark" id="b7">Assign Class to H1</button>
+    <button type="button" class="btn btn-success" id="b9">JQUERY</button>
+    <button type="button" class="btn btn-primary" id="b8">Remove h4 class</button>
+    <script>    
+        $("#b1").click(function(){
+            $("#h1").html("HELLO FIRST HEADLINE")
+        })
+
+        $("#b2").click(function(){
+            $("#h2").text("HELLO SECOND  HEADLINE")
+        })
+
+        $("#b3").click(function(){
+            $("#h3").css("font-size","50px")
+            $("#h3").css("font-weight","700")
+            $("#h3").css("font-style","italic")
+        })
+
+        $("#b4").click(function(){
+            $("div").css("color","blue")
+            $("div").css("font-size","30px")
+        })
+
+        $("#b5").click(function(){
+        $("p").css({"color":"red", "font-size": "40px"});
+        });
+
+        $("#b6").click(function(){
+        $(".green").css({"color":"green", "font-size": "40px"});
+        });
+
+        $("#b7").click(function(){
+            $("#h1").addClass("h1Class border border-success")
+        });
+
+        $("#b9").click(function(){
+            $(".Jh1").html("jquery practice")
+        })
+
+        $("#b8").click(function(){
+            $("#jqh1").removeClass("Jh1 border border-success");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="text-danger display-4">First div</div>
+    <div id="div-2">Second div</div>
+    <p class="lead text-danger font-weight-bold">First para</p>
+    <p class="lead text-success font-weight-bold">Second para</p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+    <button id="change-div">Change Div</button>
+    <button id="change-p">Remove P</button>
+    <button id="change-c1">Change C1</button>
+    <button id="change-li">Change li</button>
+    <script>
+        $("#change-div").click(function(){
+            $("#div-2").addClass("display-2 border border-success");
+        });
+
+        $("#change-p").click(function(){
+            $("p").removeClass("lead font-weight-bold");
+        });
+
+        $("#change-c1").click(function(){
+            $("li").addClass("text-primary");
+        });
+
+        $("#change-li").click(function(){
+            $("li").addClass(function( index ) {
+                // return "p-" + (index%5)
+                if (index%2 == 0){
+                return "text-danger"
+                } else {
+                return "text-success"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
