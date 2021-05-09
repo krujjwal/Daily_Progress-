@@ -7,12 +7,270 @@
     <title>harry potter</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wrapper{
+            margin: 0px auto;
+            width: 100%;
+        }
+
+        .main{
+            width: 100%;
+            float: left;
+            height: 100vh;
+            background-image: url("https://parade.com/wp-content/uploads/2020/04/harry-potter.jpg");       
+            background-size: 100%;
+            overflow: hidden;
+             }
+
+        .nav{
+            width: 100%;
+            /* float: left; */
+            background-color: rgba(219, 6, 6, 0.8);
+        }
+
+        ul{
+            list-style-type: none;
+            overflow: hidden;
+            display: block;
+            float: left;
+        }
+
+        li{
+            float: left;
+            border-right: 2px solid #bbb;
+        }
+
+        li:last-child{
+            border-right: none;
+        }
+
+        a{
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 24px 56px;
+            text-decoration: rgb(159, 236, 16);
+            font-size: 18px;
+            transition: all 0.5s    ;
+        }
+
+        a:hover{
+            background-color: #a5aa05;
+            color: #333;
+        }
+
+        .search{
+            float: right;
+            margin-left: 300px;
+        }
+        .search input{
+            width: 200px;
+            height: 30px;
+            margin: 20px 20px 0px 0px;
+            border-radius: 15px;
+            border: 1px solid #fff;
+            background-color: rgb(156, 160, 214);
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <img src="https://images.ctfassets.net/usf1vwtuqyxm/1uzo3DWrgwqEsWOWiYUoEA/2127408dc271e6e7f2ed009359ccbcaf/WW_Hero_Image.jpg?fm=jpg" alt="wizard world" class="img-thumbnail" style="width: 120px; height: 100px;">
+    <div class="wrapper">
+        <div class="main">
+            <div class="nav">
+                <ul>
+                    <li onclick="char()"> <a href="#">CHARACTERS</a></li>
+                    <li onclick="stud()"> <a href="#">STUDENTS</a></li>
+                    <li> <a href="#">STAFF</a></li>
+                    <li> <a href="#">HOUSE</a></li>
+                </ul>
+
+                <div class="search" >
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="content">
+                
+            </div>
+
+        </div> <!--end main-->
+        <div class="display">
+            <div>
+                <div class="card bg-success" style="width: 18rem; margin: 20px;">
+                    <img src="" id="img1" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title1" >Card title</h5>
+                      <p class="card-text1"></p>
+                    </div>
+                        <p class="p11"></p>
+                        <p class="p12"></p>
+                        <p class="p13"></p>
+                  </div>
+            </div>
+
+            <div>
+                <div class="card bg-primary" style="width: 18rem; margin: 20px;">
+                    <img  class="card-img-top" id="img2" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title2">Card title</h5>
+                      <p class="card-text2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <p class="p21"></p>
+                    <p class="p22"></p>
+                    <p class="p23"></p>
+                  </div>
+            </div>
+
+            <div>
+                <div class="card bg-danger" style="width: 18rem; margin: 20px;">
+                    <img  class="card-img-top" id="img3" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title3">Card title</h5>
+                      <p class="card-text3" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <p class="p31"></p>
+                    <p class="p32"></p>
+                    <p class="p33"></p>
+                  </div>
+            </div>
+
+            <div>
+                <div class="card bg-warning" style="width: 18rem; margin: 20px;">
+                    <img class="card-img-top" id="img4" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title4">Card title</h5>
+                      <p class="card-text4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <p class="p41"></p>
+                    <p class="p42"></p>
+                    <p class="p43"></p>
+                  </div>
+            </div>
+
+            <div>
+                <div class="card bg-info" style="width: 18rem; margin: 20px;">
+                    <img  class="card-img-top" id="img5" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title5">Card title</h5>
+                      <p class="card-text5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <p class="p51"></p>
+                    <p class="p52"></p>
+                    <p class="p53"></p>
+                  </div>
+            </div>
+
         </div>
-    </div>
+    </div> <!--end wrapper-->
+
+    <script>
+
+        function char(){
+        var xhr =  new XMLHttpRequest();
+        xhr.open('GET','http://hp-api.herokuapp.com/api/characters');
+        xhr.send()
+        
+        xhr.onload = function(){
+            if (xhr.status == 200){
+                var emp = JSON.parse(xhr.response)
+               console.log((emp))
+                $(".card-title1").text(emp[0].name)
+                $(".card-title2").text(emp[1].name)
+                $(".card-title3").text(emp[2].name)
+                $(".card-title4").text(emp[3].name)
+                $(".card-title5").text(emp[4].name)
+
+
+                $(".card-text1").text(emp[0].ancestry)
+                $(".card-text2").text(emp[1].ancestry)
+                $(".card-text3").text(emp[2].ancestry)
+                $(".card-text4").text(emp[3].ancestry)
+                $(".card-text5").text(emp[4].ancestry)
+
+                $(".p11").text(emp[0].gender)
+                $(".p21").text(emp[1].gender)
+                $(".p31").text(emp[2].gender)
+                $(".p41").text(emp[3].gender)
+                $(".p51").text(emp[4].gender)
+
+                $(".p12").text(emp[0].patronus)
+                $(".p22").text(emp[1].patronus)
+                $(".p32").text(emp[2].patronus)
+                $(".p42").text(emp[3].patronus)
+                $(".p52").text(emp[4].patronus)
+
+
+                $("#img1").text(emp[0].image)
+                $("#img2").text(emp[1].image)
+                $("#img3").text(emp[2].image)
+                $("#img4").text(emp[3].image)
+                $("#img5").text(emp[4].image)
+                }
+
+            else{
+                console.log("error code is:"+xhr.status)
+            }
+        }
+    }
+
+        function stud(){
+            var xhr =  new XMLHttpRequest();
+        xhr.open('GET','http://hp-api.herokuapp.com/api/characters/students');
+        xhr.send()
+        
+        xhr.onload = function(){
+            if (xhr.status == 200){
+                var emp = JSON.parse(xhr.response)
+               console.log((emp))
+                $(".card-title1").text(emp[0].name)
+                $(".card-title2").text(emp[1].name)
+                $(".card-title3").text(emp[2].name)
+                $(".card-title4").text(emp[3].name)
+                $(".card-title5").text(emp[4].name)
+
+
+                $(".card-text1").text(emp[0].house)
+                $(".card-text2").text(emp[1].house)
+                $(".card-text3").text(emp[2].house)
+                $(".card-text4").text(emp[3].house)
+                $(".card-text5").text(emp[4].house)
+
+                $(".p11").text(emp[0].gender)
+                $(".p21").text(emp[1].gender)
+                $(".p31").text(emp[2].gender)
+                $(".p41").text(emp[3].gender)
+                $(".p51").text(emp[4].gender)
+
+                $(".p12").text(emp[0].patronus)
+                $(".p22").text(emp[1].patronus)
+                $(".p32").text(emp[2].patronus)
+                $(".p42").text(emp[3].patronus)
+                $(".p52").text(emp[4].patronus)
+
+
+                $("#img1").text(emp[0].image)
+                $("#img2").text(emp[1].image)
+                $("#img3").text(emp[2].image)
+                $("#img4").text(emp[3].image)
+                $("#img5").text(emp[4].image)
+                }
+
+            else{
+                console.log("error code is:"+xhr.status)
+            }
+        }
+        }
+
+    </script>
 </body>
 </html>
