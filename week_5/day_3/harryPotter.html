@@ -120,7 +120,7 @@
 
             <div>
                 <div class="card bg-primary" style="width: 18rem; margin: 20px;">
-                    <img  class="card-img-top" id="img2" alt="...">
+                    <img src="" id="img2" alt="">
                     <div class="card-body">
                       <h5 class="card-title2">Card title</h5>
                       <p class="card-text2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -210,11 +210,11 @@
                 $(".p52").text(emp[4].patronus)
 
 
-                $("#img1").text(emp[0].image)
-                $("#img2").text(emp[1].image)
-                $("#img3").text(emp[2].image)
-                $("#img4").text(emp[3].image)
-                $("#img5").text(emp[4].image)
+                $("#img1").attr("src",emp[0].image)
+                $("#img2").attr("src",emp[1].image)
+                $("#img3").attr("src",emp[2].image)
+                $("#img4").attr("src",emp[3].image)
+                $("#img5").attr("src",emp[4].image)
                 }
 
             else{
@@ -258,11 +258,12 @@
                 $(".p52").text(emp[4].patronus)
 
 
-                $("#img1").text(emp[0].image)
-                $("#img2").text(emp[1].image)
-                $("#img3").text(emp[2].image)
-                $("#img4").text(emp[3].image)
-                $("#img5").text(emp[4].image)
+
+                $("#img1").attr("src",emp[0].image)
+                $("#img2").attr("src",emp[1].image)
+                $("#img3").attr("src",emp[2].image)
+                $("#img4").attr("src",emp[3].image)
+                $("#img5").attr("src",emp[4].image)
                 }
 
             else{
