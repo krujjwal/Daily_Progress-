@@ -183,7 +183,7 @@
         xhr.onload = function(){
             if (xhr.status == 200){
                 var emp = JSON.parse(xhr.response)
-               console.log((emp))
+               console.log((typeof(emp)))
                 $(".card-title1").text(emp[0].name)
                 $(".card-title2").text(emp[1].name)
                 $(".card-title3").text(emp[2].name)
