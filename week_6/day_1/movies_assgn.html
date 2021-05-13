@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">MOVIE</label>
+          <input type="text" class="form-control" id="inMovie">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Year</label>
+          <input type="number" class="form-control" id="inYear">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">directors</label>
+          <input type="text" class="form-control" id="inDirect" placeholder="1234 Main St">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">writers</label>
+          <input type="text" class="form-control" id="inWrite" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Ratings</label>
+          <input type="text" class="form-control" id="inRatings">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" id="sign" onclick="signn()">Sign in</button>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" id="disp" onclick="display()">Print Movie</button>
+          </div>
+      </form>
+
+      <p id="1"></p>
+      <p id="2"></p>
+      <p id="3"></p>
+      <p id="4"></p>
+      <p id="5"></p>
+    <script>
+
+
+        
+
+        function display(){
+
+                       
+          var name =  $("#inMovie").val();
+            var directors = $("inYear").val();
+            var year = $("inDirect").val();
+            var ratings = $("inWrite").val();
+            var writers = $("inRatings").val();
+
+            
+        class movie{
+            constructor(name,directors,year,ratings,writers){
+                this.name = name;
+                this.directors = directors;
+                this.year = year;
+                this.ratings = ratings;
+                this.writers =  writers
+            }
+            info(){
+              document.write(`MOVIE:${this.name}<br>
+                              Directors:${this.directors}<br>
+                              year:${this.year}`)
+            }
+        }
+
+        let a = new movie(name,directors,year,ratings,writers)
+        a.info();
+      }
+        // var mov =  $("#inMovie").val();
+        //     var y = $("inYear").val();
+        //     var d = $("inDirectors").val();
+        //     var w = $("inWriters").val();
+        //     var r = $("inRatings").val();
+        // var film = new movie(mov,y,d,w,r)
+        // film.print()
+        // $("1").text(mov)
+        // $("2").text(y)
+        // $("3").text(d)
+        // $("4").text(w)
+        // $("5").text(r)
+ 
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>
