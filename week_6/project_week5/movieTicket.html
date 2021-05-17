@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE TICKET WEBSITE</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+                *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wrapper{
+            margin: 0px auto;
+            width: 100%;
+        }
+
+        .main{
+            width: 100%;
+            float: left;
+            height: 100vh;
+            /* background-image: url("https://www.odeon.co.uk/media/wutfrvdz/avengers-infinity-war-and-endgame-poster.jpg");        */
+            background-size: 100%;
+            overflow: hidden;
+             }
+
+        .nav{
+            width: 100%;
+            /* float: left; */
+            background-color: rgba(219, 6, 6, 0.8);
+        }
+
+        ul{
+            list-style-type: none;
+            overflow: hidden;
+            display: block;
+            float: left;
+        }
+
+        li{
+            float: left;
+            border-right: 2px solid #bbb;
+        }
+
+        li:last-child{
+            border-right: none;
+        }
+
+        a{
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 24px 56px;
+            text-decoration: rgb(209, 11, 54);
+            font-size: 12px;
+            transition: all 0.5s    ;
+        }
+
+        a:hover{
+            background-color: #aa0520;
+            color: rgb(211, 221, 63);
+        }
+        .search{
+            float: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav class="navbar navbar-dark bg-danger">
+                <ul>
+                    <li> <a href="#">HOME</a></li>
+                    <li > <a href="#">HOLLYWOOD</a></li>
+                    <li> <a href="#">BOLLYWOOD</a></li>
+                    <li> <a href="#">WEB SERIES</a></li>
+                </ul>
+              
+                <div class="search" >
+                    <ul>
+                        <button style="background-color: black;"> <a href="#">Sign in</a></button>
+                        <button style="background-color: black;"> <a href="#">Sign in</a></button>
+                    </ul>
+                </div>
+        </nav>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 100%; height: 500px;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="https://www.odeon.co.uk/media/wutfrvdz/avengers-infinity-war-and-endgame-poster.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="http://gonewiththetwins.com/new/wp-content/uploads/2014/01/avatar.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+        </div>
+    </div>    
+        <div class="forC">
+            <div>
+                <div class="card-group">
+                    <div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    <script>
+
+    </script>
+</body>
+</html>
