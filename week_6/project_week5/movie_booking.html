@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wrapper{
+            margin: 0px auto;
+            width: 100%;
+        }
+
+        .main{
+            width: 100%;
+            float: left;
+            height: 100vh;
+            /* background-image: url("https://parade.com/wp-content/uploads/2020/04/harry-potter.jpg");        */
+            background-size: 100%;
+            overflow: hidden;
+             }
+
+        .nav{
+            width: 100%;
+            /* float: left; */
+            background-color: rgba(219, 6, 6, 0.8);
+        }
+
+        ul{
+            list-style-type: none;
+            overflow: hidden;
+            display: block;
+            float: left;
+        }
+
+        li{
+            float: left;
+            border-right: 2px solid #bbb;
+        }
+
+        li:last-child{
+            border-right: none;
+        }
+
+        a{
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 24px 56px;
+            text-decoration: rgb(159, 236, 16);
+            font-size: 18px;
+            transition: all 0.5s    ;
+        }
+
+        a:hover{
+            background-color: #a5aa05;
+            color: #333;
+        }
+
+        .search{
+            float: right;
+            margin-left: 300px;
+        }
+        .search input{
+            width: 200px;
+            height: 30px;
+            margin: 20px 20px 0px 0px;
+            border-radius: 15px;
+            border: 1px solid #fff;
+            background-color: rgb(156, 160, 214);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li onclick="char()"> <a href="#">HOME</a></li>
+            <li onclick="stud()"> <a href="#">BOLLYWOOD</a></li>
+            <li> <a href="#">HOLLYWOOD</a></li>
+            <li> <a href="#">WEB SERIES</a></li>
+        </ul>
+
+        <div class="search" >
+            <button>
+                <a href="/home/ankit/workplace/submission/week_6/signup.html"></a>
+                Sign IN 
+            </button>
+           
+            <button>
+                Sign up
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row py-3">
+            <div class="col">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../week_6/project_week5/movies asset/cooliesaramain.jpg" class="d-block w-100">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../week_6/project_week5/movies asset/Mirzapur-Poster.jpg" class="d-block w-100">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="../week_6/project_week5/movies asset/casino-royale-bond-james-poster-daniel-film-7ZPX.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                    <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card1" >
+        <div  style="display: flex; margin-left: 100px;">       
+            <div>
+                <div class="card bg-success" style="width: 22rem; margin: 20px;">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/81WJbOIQEAL._RI_.jpg" id="img1" alt="" style="height: 300px;">
+                    <div class="card-body">
+                      <h2 style="font-style: italic; font-weight: 900; text-align: center;"  class="card-title1" >COOLIE NO.1</h2>
+                     
+                    </div>
+                    
+                    <a href="file:///home/ankit/workplace/submission/week_6/book_now.html">
+                        <button>BOOK NOW</button>
+                    </a>
+                  </div>
+            </div>
+    
+            <div>
+                <div class="card bg-primary" style="width: 22rem; margin: 20px;">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/20cs_xmen_dark_phoenix_poster-keyart_2de4ace2.jpeg" id="img2" alt="" style="height: 300px;">
+                    <div class="card-body">
+                      <h2 style="font-style: italic; font-weight: 900; text-align: center;"  class="card-title2">XMEN</h2>
+                    
+                    </div>
+                    
+                    <a href="file:///home/ankit/workplace/submission/week_6/book_now.html">
+                        <button>BOOK NOW</button>
+                    </a>
+                  </div>
+            </div>
+    
+            <div>
+                <div class="card bg-danger" style="width: 22rem; margin: 20px;">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTllYzQ0MzctZTI4Ny00YTE2LTkzYjktMTc4ZWE2MDUxNzk2XkEyXkFqcGdeQXVyNzEyNTM4MTU@._V1_.jpg" class="card-img-top" id="img3" alt="..." style="height: 300px;">
+                    <div class="card-body">
+                      <h2 style="font-style: italic; font-weight: 900; text-align: center;" class="card-title3">PANCHAYAT</h3>
+                      
+                    </div>
+                    
+                    <a href="file:///home/ankit/workplace/submission/week_6/book_now.html">
+                        <button>BOOK NOW</button>
+                    </a>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card2" >
+        <div  style="display: flex; margin-left: 100px;">       
+            <div>
+                <div class="card bg-success" style="width: 22rem; margin: 20px;">
+                    <img src="https://static.wikia.nocookie.net/netflix/images/6/6a/Sacred_Games.jpg/revision/latest?cb=20200713092304" id="img1" alt="" style="height: 300px;">
+                    <div class="card-body">
+                      <h2 style="font-style: italic; font-weight: 900; text-align: center;"  class="card-title1" >SACRED GAMES</h2>
+                     
+                    </div>
+                    
+                    <a href="file:///home/ankit/workplace/submission/week_6/book_now.html">
+                        <button>BOOK NOW</button>
+                    </a>
+                  </div>
+            </div>
+    
+            <div>
+                <div class="card bg-primary" style="width: 22rem; margin: 20px;">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNTlmNDMzOWQtYzg4Ny00OWQ0LWFhN2MtNmQ2MDczZGZhNTU5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" id="img2" alt="" style="height: 300px;">
+                    <div class="card-body">
+                      <h2 style="font-style: italic; font-weight: 900; text-align: center;"  class="card-title2">WAR</h2>
+                    
+                    </div>
+                    <a href="file:///home/ankit/workplace/submission/week_6/book_now.html">
+                    <button>BOOK NOW</button>
+                    </a>
+                  </div>
+            </div>
+    
+            <div>
+                <div class="card bg-danger" style="width: 22rem; margin: 20px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Eclipse_Theatrical_One-Sheet.jpg/220px-Eclipse_Theatrical_One-Sheet.jpg" class="card-img-top" id="img3" alt="..." style="height: 300px;">
+                    <div class="card-body">
+                      <h2 style="font-style: italic; font-weight: 900; text-align: center;" class="card-title3">TWILIGHT</h3>
+                      
+                    </div>
+                    
+                    <a href="file:///home/ankit/workplace/submission/week_6/book_now.html">
+                        <button>BOOK NOW</button>
+                    </a>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card text-center " style="color: cornsilk; background-color: rgb(7, 48, 87);">
+        <div class="card-header">
+          THANKS FOR VISIT
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">For More Details</h5>
+          <p class="card-text">You can also follow our social media platforms for regular  updates</p>
+          <a href="#" class="btn btn-primary"> click here</a>
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+    </div>
+</body>
+</html>
