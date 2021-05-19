@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr  = [2,3,6,6,6,5,7];
+        var sarr = arr.sort();
+        console.log(sarr);
+        var len = sarr.length;
+        var  a=[];
+        for(var i =0; i<sarr.length;i++){
+            if(sarr[i]<sarr[len-1]){
+                a.push(sarr[i]);
+            }
+        }
+        console.log(a);
+        var b =  a.length
+        // second largest number
+        console.log(a[b-1])
+    </script>
+</body>
+</html>

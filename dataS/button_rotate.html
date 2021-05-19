@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            
+            width: 75%;
+        }
+        button{
+            font-size: 24px;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <div class="container1">
+            <button id="btn1">1</button>
+            <button id="btn2">2</button>
+            <button id="btn3">3</button>
+        </div>
+
+        <div class="container2">
+            <button id="btn4">4</button>
+            <button id="btn5" onclick="fun()">5</button>
+            <button id="btn6">6</button>
+        </div>
+
+        <div class="container3">
+            <button id="btn7">7</button>
+            <button id="btn8">8</button>
+            <button id="btn9">9</button>
+        </div>
+    </div>
+
+    <script>
+        function fun(){
+            var a = document.getElementById("btn1").textContent;
+            var b =  document.getElementById("btn2").textContent;
+            var c = document.getElementById("btn3").textContent;
+            var d =  document.getElementById("btn4").textContent;
+            var e = document.getElementById("btn5").textContent;
+            var f =  document.getElementById("btn6").textContent;
+            var g = document.getElementById("btn7").textContent;
+            var h =  document.getElementById("btn8").textContent;
+            var i = document.getElementById("btn9").textContent;
+            
+            document.getElementById("btn1").textContent = d
+            document.getElementById("btn2").textContent = a
+            document.getElementById("btn3").textContent = b
+            document.getElementById("btn4").textContent = g
+            
+            document.getElementById("btn6").textContent = c
+            document.getElementById("btn7").textContent = h
+            document.getElementById("btn8").textContent = i
+            document.getElementById("btn9").textContent = f
+            
+        }
+    </script>
+</body>
+</html>
