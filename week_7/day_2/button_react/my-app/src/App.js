@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import Navbar from './Component/LandingPage/Navbar'
-
+import Button_r from './Component/LandingPage/Button_r'
 
 export default class App extends Component {
   constructor(props){
@@ -12,10 +11,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.name}</h1>
-        <Navbar/>
+        <Button_r/>
         
       </div>
     )
   }
 }
+

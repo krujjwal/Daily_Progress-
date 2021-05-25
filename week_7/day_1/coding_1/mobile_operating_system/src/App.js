@@ -60,6 +60,28 @@ export default class App extends Component {
                   <img src="https://randomuser.me/api/portraits/women/79.jpg"></img>
                 </div>
 
+                <div>
+                  <h1>Ricky Park</h1>
+                  <p>NEW YORK</p>
+                  <p>User interface designer and</p>
+                  <p>front-end developer  </p>
+
+                  <div>
+                    <button class="btn1">MESSAGE</button>
+                    <button class="btn2">FOLLOWING</button>
+                  </div>
+
+                  <div class="lowerC">
+                    <h4>SKILLS</h4>
+                    <p>UI/UX</p>
+                    <p>Front End Developer</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>React</p>
+                    <p>Node</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
