@@ -1,0 +1,43 @@
+*{
+    margin:0; padding:0%; box-sizing: border-box;
+}
+
+button{
+    margin: 20px;
+}
+
+.bodyM{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid blue;
+    width: 520px;
+    margin-top: 50px;
+}
+
+img{
+    height: 210px;
+    width: 160px;
+}
+
+.main{
+    display: flex;
+    color: brown;
+}
+
+h3{
+    color: cornsilk;
+    background-color: green;
+    border: 4px solid green ;
+    border-radius: 4px;
+}
+
+h4{
+    margin-top: 20px;
+    border: 2px solid crimson;
+}
+
+.title{
+    text-align: center;
+    margin-top: 45px;
+    margin-left: 20px;
+}
