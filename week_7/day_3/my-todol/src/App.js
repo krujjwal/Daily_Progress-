@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import StopW from './component/LandingPage/StopW'
-
+import TodoList from './Component/LandingPage/TodoList'
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <StopW/>
-        
+        <TodoList/>
       </div>
     )
   }

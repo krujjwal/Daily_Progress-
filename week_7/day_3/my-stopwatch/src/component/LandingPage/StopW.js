@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "./TouseHooks"
+
 
 
 
@@ -11,7 +11,8 @@ export default class StopW extends Component {
             countMs:0,
             countS : 0,
             countM:0,
-            countH:0
+            countH:0,
+            miliS:""
         }
     }
 
@@ -25,23 +26,28 @@ export default class StopW extends Component {
       }
 
       handleTimeI(){
-            this.state.countMs++
-        if (this.state.countMs==100) {
-            this.setState({
-                countMs :0,
-                countS : this.state.countS+1
-
-            })
+        if(this.state.countMs==60){
+            this.setState ({
+                countS: this.state.countS +1,
+                countMs: 0
+        })
+         
+        }
+        else{
+        setInterval(()=>{
+            this.setState ({
+                countMs: this.state.countMs +1
+        })
+         
+        },1)
         }
 
+        // this.setState({
+        //     countS : this.state.countS+1
+        // })
     }
+        
 
-    
-
-
-
-
-      
 
     render() {
         return (
@@ -49,11 +55,8 @@ export default class StopW extends Component {
                 <h1>Stop Watch</h1>
                 <button onClick={()=>{this.handleTime()}}>Click Here</button>
                 <button onClick={()=>{this.handleTimeI()}}>Click Here For Time Interval</button>
-                {/* <p>{this.state.countH}</p>
-                <p>{this.state.countM}</p>
-                // <p>{this.state.countS}</p>
-                // <p>{this.state.countMs}</p> */}
-                // <button onClick={()=> setCount(count+1)}>Update</button>
+                <h2>{this.state.countMs}</h2>
+                <h2>{this.state.countS}</h2>
             </div>
         )
     }
