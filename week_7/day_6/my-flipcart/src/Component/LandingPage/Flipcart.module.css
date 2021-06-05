@@ -1,0 +1,60 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: #047bd5 ;
+}
+
+.top img{
+    height: 45px;
+    width: 100px;
+    position: relative;
+    left: 150px;
+}
+
+.top button{
+    position: relative;
+    left: 320px;
+    width: 120px;
+    height: 34px;
+    color: #047bd5;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.top input{
+    position: relative;
+    left: 250px;
+    margin-top: 2.4px;
+    height: 45px;
+    width: 500px;
+}
+
+.top :nth-child(4){
+    position: relative;
+    left: 400px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.top :nth-child(5) img{
+    position: relative;
+    left: 450px;
+    width: 50px;
+}
+
+.top p{
+    position: relative;
+    left: 450px;
+    width: 50px;
+    margin-top: 10px;
+    color: blanchedalmond;
+    font-weight: 700;
+}
