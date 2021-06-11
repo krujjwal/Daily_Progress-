@@ -7,8 +7,8 @@ export default class GitProjapi extends Component {
         super(props)
         this.state={
             username:"",
-            data :[]
-
+            data :[],
+            ab:[]
         }
     }
 
@@ -30,24 +30,33 @@ export default class GitProjapi extends Component {
         .catch(error=>console.log(error))
     }
 
-    // handleGetDetails(){
-    //     // axios.get(`${e.url}`)
-    //     // .then(resp => {
-    //     //     console.log(resp)
+    handleGetDetails(e){
+      
+        alert(e)
+
+        axios.get(`${e}`)
+        .then(resp => { 
+            // console.log(resp.data.login)
+            // console.log(resp.data)
+            this.setState({
+                ab:resp.data
+            })
+
            
-    //     // })
-    //     // .catch(error=>console.log(error))
-    //     console.log(this.state.b)
-    // }
+           
+        })
+        .catch(error=>console.log(error))
+        // console.log("abc",this.state.ab)
+    }
 
 
     render() {
 
-        console.log("ujjwal",this.state.data)
+        
         return (
             <div>
                 <div className={Mystyle.top}>
-                    <img src="https://avatars.githubusercontent.com/u/9919?s=280&v=4"/>
+                    <img src="https://avatars.githubusercontent.com/u/9919?s=280&v=4" alt=""/>
                     <h4>Why GitHub?</h4>
                     <p>Team</p>
                     <p>Enterprise</p>
@@ -68,30 +77,37 @@ export default class GitProjapi extends Component {
                     <div className={Mystyle.box2}>
                     {
                     this.state.data.map((e)=>{
-                        console.log(e)
+                        // console.log(typeof (e))
                         
                         const a = `${e.avatar_url}`
                         return <>
                                 <h1>{e.login}</h1>
-                                <img src={a}/>
-                                <button>Get Details</button>
+                                <img src={a} alt=""/>
+                                <button onClick={()=>{this.handleGetDetails(e.url)}}>Get Details</button>
                             </>
                     })
                 }
                     </div>
-                    <div className={Mystyle.box1}>
-                        <h1></h1>
+                    <div className={Mystyle.box3}>
+                        {/* {
+                            this.state.ab.length?
+                            console.log("hjg",this.state.ab[0].login)
+                            :
+                            null
+                        } */}
+
+                        <h1>
+                            {this.state.ab.login}
+                        </h1>
+
+                        <img src={this.state.ab.avatar_url}/>
                     </div>
                 </div>
             
                 
 
 
-                {/* {
-                    this.state.img.map((e)=>{
-                        return <img src={e}/>
-                    })
-                } */}
+             
                 
                 
             </div>

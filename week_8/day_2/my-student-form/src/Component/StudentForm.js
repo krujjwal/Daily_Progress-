@@ -15,7 +15,9 @@ export default class StudentForm extends Component {
                       age2:"",
                       br2:'',
                       sem2:'',
-                      mob2:''
+                      mob2:'',
+
+                      stud:[]
                       };
     
       }
@@ -34,45 +36,87 @@ export default class StudentForm extends Component {
           age2:this.state.age,
           br2:this.state.br,
           sem2:this.state.sem,
-          mob2:this.state.mob
+          mob2:this.state.mob,
         })
 
+        let data ={
+          name:this.state.sname,
+          agee : this.state.age,
+          brr:this.state.br,
+          semm:this.state.sem,
+          mobb:this.state.mob
+        }
+
+        this.state.stud.push(data)
+
+        this.setState({
+          
+          sname:"",
+          age:"",
+          dobb:"",
+          br:"",
+          sem:"",
+          mob:"",
+
+        })
+        
       }
 
+      handleDetails(i){
+          alert(i)
+          this.state.stud.splice(i,1)
+          console.log(this.state.stud)
+          this.forceUpdate();
+
+          // this.setState({
+          //   stud:this.state.stud
+          // })
+      }
       
 
       
     
       render() {
+
         return (
 
           <>
+          
           <form onSubmit={this.handleSubmit}>
             <label>
               Name:
-              <input type="text" value={this.state.value} onChange={this.handleChange} name="sname"/> <br></br>
+              <input type="text" value={this.state.sname} onChange={this.handleChange} name="sname"/> <br></br>
               AGE:
-              <input type="number" value={this.state.value} onChange={this.handleChange} name="age" /><br></br>
+              <input type="number" value={this.state.age} onChange={this.handleChange} name="age" /><br></br>
               Date of Birth:
-              <input type="date" value={this.state.value} onChange={this.handleChange} name="dob" /><br></br>
+              <input type="date" value={this.state.dob} onChange={this.handleChange} name="dob" /><br></br>
               BRANCH:
-              <input type="text" value={this.state.value} onChange={this.handleChange} name="br" /><br></br>
+              <input type="text" value={this.state.br} onChange={this.handleChange} name="br" /><br></br>
               SEMESTER:
-              <input type="text" value={this.state.value} onChange={this.handleChange} name="sem" /><br></br>
+              <input type="text" value={this.state.sem} onChange={this.handleChange} name="sem" /><br></br>
               MOBILE:
-              <input type="number" value={this.state.value} onChange={this.handleChange} name="mob" /><br></br>
+              <input type="number" value={this.state.mob} onChange={this.handleChange} name="mob" /><br></br>
             </label>
             <input type="submit" value="Submit" />
           </form>
           {/* <button onClick={this.handleSubmit} >See Details</button> */}
           <div>
             <h1>Student Details</h1>
-            <p>{this.state.sname2}</p>
-            <p>{this.state.age2}</p>
-            <p>{this.state.dob2}</p>
-            <p>{this.state.br2}</p>
-            <p>{this.state.sem2}</p>
-            <p>{this.state.mob2}</p>
+              {
+                this.state.stud.map((e,i)=>{
+                  return <>
+                          <div key={i}>
+                            <p>{e.name}</p>
+                            <p>{e.agee}</p>
+                            <p>{e.dobb}</p>
+                            <p>{e.semm}</p>
+                            <p>{e.brr}</p>
+                            <p>{e.mobb}</p>
+                            <button onClick={()=>{this.handleDetails(i)}}>Remove Details</button>
+                          </div>
+                        </>
+                })
+              }
           </div>
           </>
         );
