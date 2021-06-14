@@ -5,6 +5,7 @@ import Men from './Component/Men'
 import {BrowserRouter,Route} from 'react-router-dom'
 import './App.css'
 import {Link} from 'react-router-dom'
+import Navbar from './Component/Navbar'
 
 
 export default class App extends Component {
@@ -12,9 +13,10 @@ export default class App extends Component {
     return (
       <BrowserRouter>
       <div>
-        
+        <Navbar/>
         <switch>
         {/* <link to=""></link> */}
+        
         <Link to="Women">Women</Link>
         <Link to="Men">Men</Link>
           <Route path="/" exact component={RouteOnlineShop}/>
