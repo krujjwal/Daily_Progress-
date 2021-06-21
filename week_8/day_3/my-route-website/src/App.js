@@ -17,7 +17,7 @@ export default class App extends Component {
         <Navbar/>
         <switch>
         {/* <link to=""></link> */}
-        
+	<h1>Mac Test</h1>        
         <Link to="Women">Women</Link>
         <Link to="Men">Men</Link>
           <Route path="/" exact component={RouteOnlineShop}/>
