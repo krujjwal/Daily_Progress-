@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.nav{
+    display: flex;
+    height: 10rem;
+    background-color: #ffffff;
+    width: 100%;
+    align-items: center;
+    border-bottom: .4rem solid blue;
+}
+
+.nav select{
+    height: 5rem;
+    width: 16rem;
+    margin-left: 8rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.nav img{
+    width: 5rem;
+    height: 6rem;
+    margin-left: 8rem;
+}
+
+.nav p{
+    font-size: 2rem;
+    margin-left: 0.1rem;
+}
+
+.icon1{
+    width: 3.5rem!important;
+    height: 3.5rem!important;
+    margin-left: 36rem;
+}
+
+.icon2{
+    width: 4rem!important;
+    height: 4rem!important;
+    margin-left: 5rem;
+}
+
