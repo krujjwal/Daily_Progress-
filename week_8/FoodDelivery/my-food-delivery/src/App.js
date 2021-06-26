@@ -8,12 +8,12 @@ export default class App extends Component {
     return (
 
       <BrowserRouter>
-      <div>
-        <Navbar/>
-        <switch>
-          <Route path="/" exact component={Home}/>
-        </switch>
-      </div>
+        <div>
+          <Navbar/>
+          <switch>
+            <Route path="/" exact component={Home}/>
+          </switch>
+        </div>
       </BrowserRouter>
     )
   }
