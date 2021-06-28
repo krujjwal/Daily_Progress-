@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+.card1 img{
+    height: 20rem;
+    width: 28rem;
+    border-radius: 0.4rem;
+}
+
+.card1{
+    width: 28rem;
+    height: auto;
+    border: none;
+    box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem #b4b0b0;
+}
+
+.cardp{
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.4rem;
+    font-weight: 700;
+}
+
+.type{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.3rem;
+}
+
+.card2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.3rem;
+}
+
+.card2 p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+
+}
+
+.off{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    font: 800;
+    color: rgb(163, 51, 10);
+    margin-top: 2rem;
+}
+
+.card1 button{
+    width: 28rem;
+    height: 3.5rem;
+    border: none;
+    color: white;
+    background-color: rgb(17, 76, 238);
+    margin-top:2rem ;
+    border-radius: 0.5rem;
+}
+
+.card1 button:hover{
+    color: blue;
+    background-color: rgb(255, 102, 0);
+    font-size: 2rem;
+}

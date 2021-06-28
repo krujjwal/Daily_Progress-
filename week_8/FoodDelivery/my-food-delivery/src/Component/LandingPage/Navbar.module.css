@@ -30,6 +30,10 @@ html{
     margin-left: 8rem;
 }
 
+.nav img:hover{
+    transform: scale(1.6);
+}
+
 .nav p{
     font-size: 2rem;
     margin-left: 0.1rem;
