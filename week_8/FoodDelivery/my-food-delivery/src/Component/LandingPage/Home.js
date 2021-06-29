@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Hsytle from './Home.module.css'
 import CardComp from './CardComp.js'
+// import Hotelinfo from './Static'
 
 export default class Home extends Component {
     render() {
@@ -19,7 +20,7 @@ export default class Home extends Component {
 
                 <div className={Hsytle.cardstyle}>
                         <CardComp imgsrc='/Assets/unnamed.jpeg' name='Indian,Chinese' title='Rasoi Restaurant'
-                                star='4.5' time='40min' price='₹500 For Two' off='20% OFF' new='Use TryNew'/>
+                                star='4.5' time='40min' price='₹500 For Two' off='20% OFF' new='Use TryNew' pgLink='/restaurant'/>
 
                         <CardComp imgsrc='/Assets/SouthIndian_a5ivgy.jpeg' name='South Indian' title='The South Zone '
                                 star='4.0' time='30min' price='₹350 For Two' off='30% OFF' new='Use TryNew'/>
@@ -62,6 +63,17 @@ export default class Home extends Component {
                         <CardComp imgsrc='/Assets/32922628d4b01b32d31eb9d42afc0f55.jpeg' name='Biryani,Mughlai Chicken' title='The Biryani Story'
                                 star='3.8' time='40min' price='₹700 For Two' off='25% OFF' new='Use TryNew'/>
                 </div>
+
+                {/* <div>
+                    {
+                        Hotelinfo.map((e)=>{
+                            return (
+                                <CardComp imgsrc='/Assets/32922628d4b01b32d31eb9d42afc0f55.jpeg' name={e.name} title='The Biryani Story'
+                                star={e.id} time='40min' price='₹700 For Two' off='25% OFF' new='Use TryNew' pgLink={e.route}/>
+                            )
+                        })
+                    }
+                </div> */}
 
                 <div className={Hsytle.footer}>
                     <div>

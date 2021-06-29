@@ -14,24 +14,147 @@ html{
     background-color: rgb(11, 11, 85);
     align-items: center;
     color: #ffffff;
+    
 }
 
 .top img{
     width: 18rem;
     height: 16rem;
     margin-left: 5rem;
+    border-radius: 1rem;
 }
 
-.top p{
-    font-size: 2rem;
-}
+
 
 .top2{
     margin-left: 20rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 .top3{
-    margin-left: 50rem;
+    margin-left: 20rem;
+    font-size: 2REM;
     border: .2rem solid wheat;
-    padding: 2rem;
+    padding: 4rem;
 }
+
+.top21{
+    font-size: 3.4rem;
+    color: #ffffff;
+}
+
+.top22{
+    font-size: 1.5rem;
+    color: rgb(207, 201, 201);
+    margin-top: 1rem;
+}
+
+.top23{
+    font-size: 1.5rem;
+    color: rgb(207, 201, 201);
+    margin-top: 1rem;
+}
+
+.starbar{
+    display: flex;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.starbar1{
+    position: relative;
+    left: -4rem;
+    font-size: 2rem;
+}
+
+.starbar2{
+    position: relative;
+    left: 2rem;
+    font-size: 2rem;
+}
+
+.starbar3{
+    position: relative;
+    left: 8rem;
+    font-size: 2rem;
+}
+
+.list{
+    display: flex;
+    border-top: 0.4rem solid grey;
+    margin-top: 5rem;
+}
+
+.list1{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    padding-right: 5rem;
+    border-right: 0.3rem solid grey;
+    font-weight: 500;
+}
+
+.list1 p{
+    margin-top: 0.9rem;
+}
+
+.list2{
+    font-size: 2rem;
+    border: 2px solid blue;
+    margin-top: 5rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+.list21{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.list22{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 3rem;
+}
+
+.list23{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    color: rgb(51, 49, 49);
+}
+
+.lassi{
+    /* margin-bottom: 5rem; */
+    font-size: 1.5rem;
+    color: rgb(51, 49, 49);
+}
+
+.p{
+    font-size: 1.5rem;
+    color: rgb(51, 49, 49);
+    border-bottom: 0.2rem solid gray;
+    padding-bottom: 3rem;
+}
+
+.headF{
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+    font-weight: 700;
+    color: indianred;
+}
+
+.list2 button{
+    position: relative;
+    left: 25rem;
+    bottom: 6rem;
+    border: none;
+    color: wheat;
+    background-color: rgb(87, 153, 21);
+    width: 5rem;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+

@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import StarIcon from '@material-ui/icons/Star';
 import Cstyle from './CardComp.module.css'
+import {Link} from 'react-router-dom'
 
 
 
@@ -12,6 +13,8 @@ export default class CardComp extends Component {
         //     name:props.name
         // }
     }
+
+
 
     render() {
         return (
@@ -29,8 +32,9 @@ export default class CardComp extends Component {
                         <p>{this.props.off}</p>
                         <p>{this.props.new}</p>
                     </div>
-
-                    <button>QUICK VIEW</button>
+                    <Link to={this.props.pgLink}>
+                        <button>QUICK VIEW</button>
+                    </Link>
                 </div>
             </div>
         )

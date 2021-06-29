@@ -17,7 +17,7 @@ export default class Navbar extends Component {
                 <p>Storyboots</p>
                 <p>Clearance</p>
                 <p>Help</p>
-                <a className={Mystyle.navA} ><FindInPageRoundedIcon/></a>
+                <a className={Mystyle.navA}><FindInPageRoundedIcon/></a>
                 <a className={Mystyle.navB}><PersonOutlineIcon/></a>
                 <a className={Mystyle.navC}><ShoppingCartIcon/></a>
                     
