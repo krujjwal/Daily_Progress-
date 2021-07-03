@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Qstyle from './Qview.module.css'
+import Qstyle from './QviewR3.module.css'
 import StarIcon from '@material-ui/icons/Star';
 
 
-export default class Qview extends Component {
+export default class QviewR3 extends Component {
     constructor(){
         super();
             this.state={

@@ -23,27 +23,27 @@ export default class Home extends Component {
                                 star='4.5' time='40min' price='₹500 For Two' off='20% OFF' new='Use TryNew' pgLink='/restaurant'/>
 
                         <CardComp imgsrc='/Assets/SouthIndian_a5ivgy.jpeg' name='South Indian' title='The South Zone '
-                                star='4.0' time='30min' price='₹350 For Two' off='30% OFF' new='Use TryNew'/>
+                                star='4.0' time='30min' price='₹350 For Two' off='30% OFF' new='Use TryNew' pgLink='/restaurant2'/>
 
                         <CardComp imgsrc='/Assets/chole_bhature_pakwan_520_070815033739.webp' name='North Indian,Biryani' title='Desi Tadka Restaurant'
-                                star='3.5' time='50min' price='₹400 For Two' off='15% OFF' new='Use TryNew'/>
+                                star='3.5' time='50min' price='₹400 For Two' off='15% OFF' new='Use TryNew' pgLink='/restaurant3'/>
 
                         <CardComp imgsrc='/Assets/32922628d4b01b32d31eb9d42afc0f55.jpeg' name='Biryani,Mughlai Chicken' title='The Biryani Story'
-                                star='3.8' time='40min' price='₹700 For Two' off='25% OFF' new='Use TryNew'/>
+                                star='3.8' time='40min' price='₹700 For Two' off='25% OFF' new='Use TryNew' pgLink='/restaurant4' />
                 </div>
 
                 <div className={Hsytle.cardstyle}>
                         <CardComp imgsrc='/Assets/image.jpeg' name='Sweets,Confectinery' title='Backery House'
-                                star='4.8' time='80min' price='₹900 For Two' off='10% OFF' new='Use TryNew'/>
+                                star='4.8' time='80min' price='₹900 For Two' off='10% OFF' new='Use TryNew' pgLink='/restaurant5' />
 
                         <CardComp imgsrc='/Assets/download.jpeg' name=',NorthIndian,South Indian' title='RajDarbar Restaurants'
-                                star='4.0' time='45min' price='₹450 For Two' off='30% OFF' new='Use TryNew'/>
+                                star='4.0' time='45min' price='₹450 For Two' off='30% OFF' new='Use TryNew' pgLink='/restaurant6' />
 
                         <CardComp imgsrc='/Assets/87775484_2423209061324295_8080038552815009792_o.jpeg' name='Chinese,Tandoor' title='Breeze Restro'
-                                star='4.5' time='30min' price='₹400 For Two' off='25% OFF' new='Use TryNew'/>
+                                star='4.5' time='30min' price='₹400 For Two' off='25% OFF' new='Use TryNew' pgLink='/restaurant7' />
 
                         <CardComp imgsrc='/Assets/52478948.jpeg' name='Indian,Chinese' title='Foodies Point'
-                                star='4.2' time='60min' price='₹800 For Two' off='35% OFF' new='Use TryNew'/>
+                                star='4.2' time='60min' price='₹800 For Two' off='35% OFF' new='Use TryNew' pgLink='/restaurant8' />
                 </div>
 
                 <div>
@@ -52,16 +52,16 @@ export default class Home extends Component {
 
                 <div className={Hsytle.cardstyle}>
                         <CardComp imgsrc='/Assets/unnamed.jpeg' name='Indian,Chinese' title='Rasoi Restaurant'
-                                star='4.5' time='40min' price='₹500 For Two' off='20% OFF' new='Use TryNew'/>
+                                star='4.5' time='40min' price='₹500 For Two' off='20% OFF' new='Use TryNew' pgLink='/restaurant9' />
 
                         <CardComp imgsrc='/Assets/SouthIndian_a5ivgy.jpeg' name='South Indian' title='The South Zone '
-                                star='4.0' time='30min' price='₹350 For Two' off='30% OFF' new='Use TryNew'/>
+                                star='4.0' time='30min' price='₹350 For Two' off='30% OFF' new='Use TryNew' pgLink='/restaurant10' />
 
                         <CardComp imgsrc='/Assets/chole_bhature_pakwan_520_070815033739.webp' name='North Indian,Biryani' title='Desi Tadka Restaurant'
-                                star='3.5' time='50min' price='₹400 For Two' off='15% OFF' new='Use TryNew'/>
+                                star='3.5' time='50min' price='₹400 For Two' off='15% OFF' new='Use TryNew' pgLink='/restaurant11' />
 
                         <CardComp imgsrc='/Assets/32922628d4b01b32d31eb9d42afc0f55.jpeg' name='Biryani,Mughlai Chicken' title='The Biryani Story'
-                                star='3.8' time='40min' price='₹700 For Two' off='25% OFF' new='Use TryNew'/>
+                                star='3.8' time='40min' price='₹700 For Two' off='25% OFF' new='Use TryNew' pgLink='/restaurant12' />
                 </div>
 
                 {/* <div>
