@@ -13,49 +13,50 @@ export default class QviewR2 extends Component {
         
     }
 
-    handleclick1(a,b){
+    handleclick(a,b){
         alert(b)
         // this.setState({
         //     arrHotelName.push(a)
         // })
         this.state.arrHotelName.push(a);
-        this.state.arrPriceName.push(b)
+        this.state.arrPriceName.push(b);
+        this.forceUpdate()
     }
 
-    handleclick2(a,b){
-        this.state.arrHotelName.push(a);
-        this.state.arrPriceName.push(b)
-    }
+    // handleclick2(a,b){
+    //     this.state.arrHotelName.push(a);
+    //     this.state.arrPriceName.push(b)
+    // }
 
-    handleclick3(a,b){
-        this.state.arrHotelName.push(a);
-        this.state.arrPriceName.push(b)
-    }
+    // handleclick3(a,b){
+    //     this.state.arrHotelName.push(a);
+    //     this.state.arrPriceName.push(b)
+    // }
 
-    handleclick4(a,b){
-        this.state.arrHotelName.push(a);
-        this.state.arrPriceName.push(b)
-    }
+    // handleclick4(a,b){
+    //     this.state.arrHotelName.push(a);
+    //     this.state.arrPriceName.push(b)
+    // }
 
-    handleclick5(a,b){
-        this.state.arrHotelName.push(a);
-        this.state.arrPriceName.push(b)
-    }
+    // handleclick5(a,b){
+    //     this.state.arrHotelName.push(a);
+    //     this.state.arrPriceName.push(b)
+    // }
 
-    handleclick6(a,b){
-        this.state.arrHotelName.push(a);
-        this.state.arrPriceName.push(b)
-    }
+    // handleclick6(a,b){
+    //     this.state.arrHotelName.push(a);
+    //     this.state.arrPriceName.push(b)
+    // }
 
-    handleclick7(a,b){
-        this.state.arrHotelName.push(a);
-        this.state.arrPriceName.push(b)
-    }
+    // handleclick7(a,b){
+    //     this.state.arrHotelName.push(a);
+    //     this.state.arrPriceName.push(b)
+    // }
 
-    handleclick8(a,b){
-        this.state.arrHotelName.push(a);
-        this.state.arrPriceName.push(b)
-    }
+    // handleclick8(a,b){
+    //     this.state.arrHotelName.push(a);
+    //     this.state.arrPriceName.push(b)
+    // }
 
 
     render() {
@@ -110,26 +111,26 @@ export default class QviewR2 extends Component {
                         <p className={Qstyle.list22}>Ghar ki Thali</p>
                         <p className={Qstyle.list23}>₹250</p>
                         <p className={Qstyle.list23}>Rice,Dal,Seasonal Veg,Tawa Roti,salad,sweet</p>
-                        <button onClick={()=>{this.handleclick1('Ghar ki Thali','250')}} >ADD</button>
+                        <button onClick={()=>{this.handleclick('Ghar ki Thali:250','250')}} >ADD</button>
 
                         <div>
                             <p className={Qstyle.list22}>Aloo Paratha</p>
                             <p className={Qstyle.list23}>₹50 for one</p>
-                            <button onClick={()=>{this.handleclick2('Aloo Paratha','50')}} >ADD</button>
+                            <button onClick={()=>{this.handleclick('Aloo Paratha:50','50')}} >ADD</button>
                         </div>
 
                         <div>
                             <p className={Qstyle.list22}>Chole Bhature</p>
                             <p className={Qstyle.list23}>90</p>
                             <p className={Qstyle.list23}>2 pc Bhature,chole</p>
-                            <button onClick={()=>{this.handleclick3('Chole Bhature','90')}}>ADD</button>
+                            <button onClick={()=>{this.handleclick('Chole Bhature:90','90')}}>ADD</button>
                         </div>
 
                         <div>
                             <p className={Qstyle.list22}>Paneer Butter Masala</p>
                             <p className={Qstyle.list23}>149</p>
                             <p className={Qstyle.p}>Half paneer butter masala</p>
-                            <button onClick={()=>{this.handleclick4('Paneer Butter Masala','149')}}>ADD</button>
+                            <button onClick={()=>{this.handleclick('Paneer Butter Masala:149','149')}}>ADD</button>
                         </div>
 
                         <div>
@@ -137,37 +138,67 @@ export default class QviewR2 extends Component {
                             <p className={Qstyle.list22}>Ghar Ki Thali</p>
                             <p className={Qstyle.list23}>250</p>
                             <p className={Qstyle.p}>Rice,Dal,Seasonal Veg,Tawa Roti</p>
-                            <button onClick={()=>{this.handleclick5('Ghar Ki Thali','250')}}>ADD</button>
+                            <button onClick={()=>{this.handleclick('Ghar Ki Thali:250','250')}}>ADD</button>
                         </div>
 
                         <div>
                             <p className={Qstyle.headF}>Dessert</p>
                             <p className={Qstyle.list22}>Gulab Jamun</p>
                             <p className={Qstyle.list23}>60 2pc</p>
-                            <button onClick={()=>{this.handleclick6('Gulab Jamun','60')}}>ADD</button>
+                            <button onClick={()=>{this.handleclick('Gulab Jamun:60','60')}}>ADD</button>
                         </div>
 
                         <div>
                             <p className={Qstyle.list22}>Rasmalai</p>
                             <p className={Qstyle.list23}>90 1 pc</p>
-                            <button onClick={()=>{this.handleclick7('Rasmalai','90')}}>ADD</button>
+                            <button onClick={()=>{this.handleclick('Rasmalai:90','90')}}>ADD</button>
                         </div>
 
                         <div>
                             <p className={Qstyle.list22}>Lassi</p>
                             <p className={Qstyle.lassi}>60 per Glass</p>
-                            <button onClick={()=>{this.handleclick8('Lassi','60')}}>ADD</button>
+                            <button onClick={()=>{this.handleclick('Lassi:60','60')}}>ADD</button>
                         </div>
                     </div>
 
                     <div>
                         <p className={Qstyle.cart}>Cart</p>
 
-                        <ol>
-                        {/* {this.state.arrHotelName.map((e)=>{
-                            return <li>{e}</li>;
-                        })} */}
-                    </ol>
+                        <ul className={Qstyle.cart22}>
+                        {
+                            
+                            this.state.arrHotelName.length?
+                            this.state.arrHotelName.map((e)=>(
+                                
+                                    <p>
+                                        {e}
+                                    </p>
+                                
+                                
+                               
+                            ))
+
+                            :"abc"
+
+                            }
+
+                            {/* {
+
+                            this.state.arrPriceName.length?
+                            this.state.arrPriceName.map((e)=>(
+                                
+                                <p>
+                                
+                                    {e}
+                                </p>
+                            ))
+
+                            :"abc" */}
+                            
+                        
+                    
+                    </ul>
+                        
 
                     </div>
                 </div>
