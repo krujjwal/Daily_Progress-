@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Qstyle from './Qview.module.css'
 import StarIcon from '@material-ui/icons/Star';
+import {Link} from 'react-router-dom'
 
 
 export default class Qview extends Component {
@@ -24,11 +25,14 @@ export default class Qview extends Component {
         this.forceUpdate()
     }
 
-    // handleDetails(){
-    //     this.setState({
-            
-    //     })
-    // }
+    handleDetails(){
+        for(var i = 0;i<this.state.arrPriceName.length;i++){
+            this.setState({
+                arrSum:this.state.arrPriceName[1]
+            })
+        }
+        // this.forceUpdate()
+    }
 
     // handleclick2(a,b){
     //     this.state.arrHotelName.push(a);
@@ -195,22 +199,22 @@ export default class Qview extends Component {
                     
                     </ul>
 
-                    <p className={Qstyle.cart2}>
-
-                        {
+                    
+                    <ol>
+                        {/* {
                             this.state.arrPriceName.length?
-                            this.state.arrPriceName.map((e)=>(
-                                <p>
-                                    Total={e}
-                                </p>
-                            ))
+                            <ul onChange={handleDetails((e)=>())} className={Qstyle.cart22}>
+                                {this.state.arrSum}
+                            </ul>
 
                             :"Total=0"
-                        }
+                        } */}
 
-                    </p>
+                    </ol>
 
-                    <button className={Qstyle.cart2} >Proceed</button>
+                    <Link to="/signup">
+                        <button>QUICK VIEW</button>
+                    </Link>
                         
 
                     </div>

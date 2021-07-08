@@ -14,6 +14,7 @@ import QviewR9 from './Component/LandingPage/QviewR9'
 import QviewR10 from './Component/LandingPage/QviewR10'
 import QviewR11 from './Component/LandingPage/QviewR11'
 import QviewR12 from './Component/LandingPage/QviewR12'
+import Signup from './Component/LandingPage/Signup'
 
 // import CardComp from './Component/LandingPage/CardComp'
 // import { Card } from '@material-ui/core'
@@ -42,6 +43,7 @@ export default class App extends Component {
             <Route path="/restaurant10" component={QviewR10} />
             <Route path="/restaurant11" component={QviewR11} />
             <Route path="/restaurant12" component={QviewR12} />
+            <Route path="/signup" component={Signup}/>
           </switch>
         </div>
       </BrowserRouter>
