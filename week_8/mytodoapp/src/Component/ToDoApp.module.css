@@ -1,0 +1,28 @@
+.body_frame{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(5, 39, 148);
+}
+
+.logo_frame{
+    /* display: flex;
+    flex-direction: column;
+    row-gap: 30px; */
+}
+.app_logo {
+    height: 15vmin;
+    pointer-events: none;
+    animation: app_logo_spin 10s infinite linear;
+}
+@keyframes app_logo_spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
