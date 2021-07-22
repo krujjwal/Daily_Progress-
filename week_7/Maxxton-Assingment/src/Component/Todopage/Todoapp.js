@@ -106,6 +106,7 @@ export default class Todoapp extends Component {
                 this.state.alltask.splice(i,1)
             }
         })
+        
         this.forceUpdate();
     }
     reOpenTask=(id)=>{
