@@ -17,11 +17,11 @@ import DateTimePicker from 'react-datetime-picker';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-// import EditIcon from '@material-ui/icons/Edit';
-// import DoneAllIcon from '@material-ui/icons/DoneAll';
-// import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-// import SettingsBackupRestoreIcon from '@material-ui/icons/SettingsBackupRestore';
-// import Divider from '@material-ui/core/Divider';
+import EditIcon from '@material-ui/icons/Edit';
+import DoneAllIcon from '@material-ui/icons/DoneAll';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import SettingsBackupRestoreIcon from '@material-ui/icons/SettingsBackupRestore';
+import Divider from '@material-ui/core/Divider';
 
 
 export default class ToDoApp extends Component {
@@ -70,6 +70,102 @@ export default class ToDoApp extends Component {
         this.setState({
             [e.target.name]:e.target.value
         })
+    }
+
+
+    savedata=()=>{
+        if(this.state.title !='' && 
+            this.state.discription != '' && 
+            this.state.duedate !='' && 
+            this.state.priority != ''){
+                let data={
+                    id:this.state.id,
+                    title:this.state.title,  
+                    discription:this.state.discription,
+                    date:this.state.date,
+                    duedate:this.state.duedate,
+                    priority:this.state.priority,
+                }
+                this.state.alltask.push(data);
+                this.setState({
+                    id:this.state.id+1, 
+                    add_task_dialog:false,
+                    id:'',
+                    title:'',  
+                    discription:'',
+                    date:new Date(),
+                    duedate:'',
+                    priority:'',
+                    dialog_title:"Add Task"
+                })
+        }
+        else{
+            this.setState({
+                error_msg:'You are not filled all section, plz fill it.'
+            })
+        }
+    }
+
+    completeTask=(id)=>{
+
+        this.state.alltask.map((e,i)=>{
+            if(e.id===id){
+                this.state.completetask.push(e)
+                this.state.alltask.splice(i,1)
+            }
+        })
+        
+        this.forceUpdate();
+    }
+    reOpenTask=(id)=>{
+        this.state.completetask.map((e,i)=>{
+            if(e.id===id){
+                this.state.alltask.push(e)
+                this.state.completetask.splice(i,1)
+            }
+        })
+        this.forceUpdate();
+    }
+    deleteCompleteTask=(id)=>{
+        this.state.completetask.map((e,i)=>{
+            if(e.id===id){
+                this.state.completetask.splice(i,1)
+            }
+        })
+        this.forceUpdate();
+    }
+    deleteAllTask=(id)=>{
+        this.state.alltask.map((e,i)=>{
+            if(e.id===id){
+                this.state.alltask.splice(i,1)
+            }
+        })
+        this.forceUpdate();
+        
+    }
+    editTask=(id)=>{
+        this.state.alltask.map((e,i)=>{
+            if(e.id===id){
+                this.setState({
+                    add_task_dialog:true,
+                    dialog_title:"Edit Task",
+                    title:e.title,
+                    date:e.date,
+                    duedate:e.duedate,
+                    priority:e.priority,
+                    discription:e.discription
+
+                })
+                this.state.alltask.splice(i,1)
+            }
+        })
+        this.forceUpdate();
+    }
+    onSearch=(e)=>{
+        this.setState({
+            [e.target.name]:e.target.value
+        })
+       
     }
 
     render() {
@@ -200,6 +296,265 @@ export default class ToDoApp extends Component {
                             
                         </Tabs>
                     </AppBar>
+                </div>
+
+                <div className={Style.contentbox}>
+                    <div>
+                        {
+                            this.state.tabvalue==0?
+                                <Card className={Style.display_card}>
+                                    <div className={Style.card_content}>
+                                        {
+                                            this.state.alltask.map((e)=>{
+                                                if(this.state.search=='' && (this.state.sort=='' ||this.state.sort=='Select')){
+                                                    return(
+                                                        <div className={Style.card_content_gap}>
+                                                            <div>
+                                                                <Typography variant="h4">{e.title}</Typography>
+                                                            </div>
+                                                            <div>
+                                                                <Typography variant="body2">{e.discription}</Typography>
+                                                            </div>
+                                                            <div className={Style.datepicker_arrng}>
+                                                                <div>
+                                                                    <lable>Submited Date:</lable>
+                                                                    <DateTimePicker
+                                                                        format="dd:MM:y"
+                                                                        value={e.date}
+                                                                        disableCalendar="true"
+                                                                        className={Style.git}
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <lable>Submited Time:</lable>
+                                                                    <DateTimePicker
+                                                                        format="h:mm:a"
+                                                                        value={e.date}
+                                                                        amPmAriaLabel="Select AM/PM"
+                                                                        disableClock="true"
+                                                                        disableCalendar="true"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <lable> Submission Date:</lable>
+                                                                    <DateTimePicker
+                                                                        format="dd:MM:y"
+                                                                        value={e.duedate}
+                                                                        disableCalendar="true"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <lable>Priority:</lable>
+                                                                    <Typography>{e.priority}</Typography>
+                                                                </div>
+                                                            </div>
+                                                            <div className={Style.iconbutton_arrng}>
+                                                                <div>
+                                                                    <IconButton style={{color:'#7274ff'}}>
+                                                                        <EditIcon onClick={()=>this.editTask(e.id)}/>
+                                                                    </IconButton>
+                                                                    <IconButton style={{color:'#96F06F'}}>
+                                                                        <DoneAllIcon onClick={()=>this.completeTask(e.id)}/>
+                                                                    </IconButton>
+                                                                    <IconButton style={{color:'red'}}>
+                                                                        <DeleteForeverIcon onClick={()=>this.deleteAllTask(e.id)}/>
+                                                                    </IconButton>
+                                                                </div>
+                                                            </div>
+                                                            <Divider/>
+                                                        </div>
+                                                    )
+                                                }
+                                                else{
+                                                    if(e.title==this.state.search || e.priority== this.state.sort){
+                                                        return(
+                                                            <div className={Style.card_content_gap}>
+                                                                <div>
+                                                                    <Typography variant="h4">{e.title}</Typography>
+                                                                </div>
+                                                                <div>
+                                                                    <Typography variant="body2">{e.discription}</Typography>
+                                                                </div>
+                                                                <div className={Style.datepicker_arrng}>
+                                                                    <div>
+                                                                        <lable>Submited Date:</lable>
+                                                                        <DateTimePicker
+                                                                            format="dd:MM:y"
+                                                                            value={e.date}
+                                                                            disableCalendar="true"
+                                                                        />
+                                                                    </div>
+                                                                    <div>
+                                                                        <lable>Submited Time:</lable>
+                                                                        <DateTimePicker
+                                                                            format="h:mm:a"
+                                                                            value={e.date}
+                                                                            amPmAriaLabel="Select AM/PM"
+                                                                            disableClock="true"
+                                                                            disableCalendar="true"
+                                                                        />
+                                                                    </div>
+                                                                    <div>
+                                                                        <lable> Submission Date:</lable>
+                                                                        <DateTimePicker
+                                                                            format="dd:MM:y"
+                                                                            value={e.duedate}
+                                                                            disableCalendar="true"
+                                                                        />
+                                                                    </div>
+                                                                    <div>
+                                                                        <lable>Priority</lable>
+                                                                        <Typography>{e.priority}</Typography>
+                                                                    </div>
+                                                                </div>
+                                                                <div className={Style.iconbutton_arrng}>
+                                                                    <div>
+                                                                        <IconButton style={{color:'#7274ff'}}>
+                                                                            <EditIcon onClick={()=>this.editTask(e.id)}/>
+                                                                        </IconButton>
+                                                                        <IconButton style={{color:'#96F06F'}}>
+                                                                            <DoneAllIcon onClick={()=>this.completeTask(e.id)}/>
+                                                                        </IconButton>
+                                                                        <IconButton style={{color:'red'}}>
+                                                                            <DeleteForeverIcon onClick={()=>this.deleteAllTask(e.id)}/>
+                                                                        </IconButton>
+                                                                    </div>
+                                                                </div>
+                                                                <Divider/>
+                                                            </div>
+                                                        )
+                                                    }
+                                                }
+                                            })
+                                        }
+                                    </div>
+                                </Card>
+                                
+                            :
+                            <div>
+                                <Card className={Style.display_card}>
+                                    <div className={Style.card_content}>
+                                        {
+                                            this.state.completetask.map((e)=>{
+                                                if(this.state.search=='' && (this.state.sort=='' || this.state.sort=='Select')){
+                                                    return(
+                                                        <div className={Style.card_content_gap}>
+                                                            <div>
+                                                                <Typography variant="h4">{e.title}</Typography>
+                                                            </div>
+                                                            <div>
+                                                                <Typography variant="body2">{e.discription}</Typography>
+                                                            </div>
+                                                            <div className={Style.datepicker_arrng}>
+                                                                <div>
+                                                                    <lable>Submited Date:</lable>
+                                                                    <DateTimePicker
+                                                                        format="dd:MM:y"
+                                                                        value={e.date}
+                                                                        disableCalendar="true"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <lable>Submited Time:</lable>
+                                                                    <DateTimePicker
+                                                                        format="h:mm:a"
+                                                                        value={e.date}
+                                                                        amPmAriaLabel="Select AM/PM"
+                                                                        disableClock="true"
+                                                                        disableCalendar="true"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <lable> Submission Date:</lable>
+                                                                    <DateTimePicker
+                                                                        format="dd:MM:y"
+                                                                        value={e.duedate}
+                                                                        disableCalendar="true"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <lable>Priority</lable>
+                                                                    <Typography>{e.priority}</Typography>
+                                                                </div>
+                                                            </div>
+                                                            <div className={Style.iconbutton_arrng}>
+                                                                <div>
+                                                                    < IconButton onClick={()=>this.reOpenTask(e.id)} style={{color:'#7274ff'}}>
+                                                                        <SettingsBackupRestoreIcon/>
+                                                                    </IconButton>
+                                                                    <IconButton style={{color:'red'}}>
+                                                                        <DeleteForeverIcon onClick={()=>this.deleteCompleteTask(e.id)}/>
+                                                                    </IconButton>
+                                                                </div>
+                                                            </div>
+                                                            <Divider/>
+                                                        </div>
+                                                    )
+                                                }
+                                                else{
+                                                    if(e.title==this.state.search || e.priority==this.state.sort){
+                                                        return(
+                                                            <div className={Style.card_content_gap}>
+                                                                <div>
+                                                                    <Typography variant="h4">{e.title}</Typography>
+                                                                </div>
+                                                                <div>
+                                                                    <Typography variant="body2">{e.discription}</Typography>
+                                                                </div>
+                                                                <div className={Style.datepicker_arrng}>
+                                                                    <div>
+                                                                        <lable>Submited Date:</lable>
+                                                                        <DateTimePicker
+                                                                            format="dd:MM:y"
+                                                                            value={e.date}
+                                                                            disableCalendar="true"
+                                                                        />
+                                                                    </div>
+                                                                    <div>
+                                                                        <lable>Submited Time:</lable>
+                                                                        <DateTimePicker
+                                                                            format="h:mm:a"
+                                                                            value={e.date}
+                                                                            amPmAriaLabel="Select AM/PM"
+                                                                            disableClock="true"
+                                                                            disableCalendar="true"
+                                                                        />
+                                                                    </div>
+                                                                    <div>
+                                                                        <lable> Submission Date:</lable>
+                                                                        <DateTimePicker
+                                                                            format="dd:MM:y"
+                                                                            value={e.duedate}
+                                                                            disableCalendar="true"
+                                                                        />
+                                                                    </div>
+                                                                    <div>
+                                                                        <lable>Priority</lable>
+                                                                        <Typography>{e.priority}</Typography>
+                                                                    </div>
+                                                                </div>
+                                                                <div className={Style.iconbutton_arrng}>
+                                                                    <div>
+                                                                        < IconButton onClick={()=>this.reOpenTask(e.id)} style={{color:'#7274ff'}}>
+                                                                            <SettingsBackupRestoreIcon/>
+                                                                        </IconButton>
+                                                                        <IconButton style={{color:'red'}}>
+                                                                            <DeleteForeverIcon onClick={()=>this.deleteCompleteTask(e.id)}/>
+                                                                        </IconButton>
+                                                                    </div>
+                                                                </div>
+                                                                <Divider/>
+                                                            </div>
+                                                        )
+                                                    }
+                                                }
+                                            })
+                                        }
+                                    </div>
+                                </Card>
+                            </div>
+                        }
+                    </div>
                 </div>
                 
             </div>
