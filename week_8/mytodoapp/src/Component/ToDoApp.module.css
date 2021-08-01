@@ -26,3 +26,70 @@
       transform: rotate(360deg);
     }
 }
+.card_div{
+    position: absolute;
+    top: 88%;
+}
+.card{
+    width: 400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add_task_dialog{
+    width:600px;
+}
+.dialog_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+.input_arrng{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.lable_arrng{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+.discription_arrng{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 5px;
+}
+.body_searchbox{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0px;
+}
+.searchbox{
+    width: 400px;
+    height: 50px;
+    outline-color:lightblue;
+    border: 1.5px solid #7274ff;
+    font-size: 18px;
+} 
+.selectbox{
+    width: 100px;
+    height: 55px;
+    outline-color:lightblue;
+    border: 1.5px solid #7274ff;
+    background-color: white;
+    font-size: 18px;
+}
