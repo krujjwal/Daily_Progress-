@@ -12,7 +12,7 @@ export default class Flipcart extends Component {
                     <div className={Style.top}>
                         <table>
                             <tr>
-                                <td><img src="https://content.couponspy.in/public/shop/240.jpg" /></td>
+                                <td><img src="https://content.couponspy.in/public/shop/240.jpg" alt ="image" /></td>
                                 <td><input placeholder="Search for products brand and more"/></td>
                                 <td><button>Login</button></td>
                                 <td>More ^</td>
