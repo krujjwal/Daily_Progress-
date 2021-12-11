@@ -80,6 +80,11 @@ export default class App extends Component {
                     <p>JavaScript</p>
                     <p>React</p>
                     <p>Node</p>
+
+
+
+
+                    
                   </div>
                 </div>
               </div>
