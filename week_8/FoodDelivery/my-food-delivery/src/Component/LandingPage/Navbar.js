@@ -39,6 +39,174 @@ export default class Navbar extends Component {
                     <p>Cart</p>
                 </div>
 
+                <div className={Mystyle.nav}>
+                    <img src="/Assets/Swiggy-1594035877.jpeg" alt="picimg"/>
+
+                    <select>
+                        <option>New Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Varanasi</option>
+                        <option>Patna</option>
+                        <option>Banglore</option>
+                        <option>Chennai</option>
+                    </select>
+
+                    <SearchIcon className={Mystyle.icon1} />
+                    <p>Search</p>
+
+                    <SpeedIcon className={Mystyle.icon2}/>
+                    <p>Offers</p>
+
+                    <HelpOutlineIcon className={Mystyle.icon2}/>
+                    <p>Help</p>
+
+                    <PersonIcon className={Mystyle.icon2}/>
+                    <p>Sign In</p>
+
+                    <ShoppingCartIcon className={Mystyle.icon2}/>
+                    <p>Cart</p>
+                </div>
+
+                <div className={Mystyle.nav}>
+                    <img src="/Assets/Swiggy-1594035877.jpeg" alt="picimg"/>
+
+                    <select>
+                        <option>New Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Varanasi</option>
+                        <option>Patna</option>
+                        <option>Banglore</option>
+                        <option>Chennai</option>
+                    </select>
+
+                    <SearchIcon className={Mystyle.icon1} />
+                    <p>Search</p>
+
+                    <SpeedIcon className={Mystyle.icon2}/>
+                    <p>Offers</p>
+
+                    <HelpOutlineIcon className={Mystyle.icon2}/>
+                    <p>Help</p>
+
+                    <PersonIcon className={Mystyle.icon2}/>
+                    <p>Sign In</p>
+
+                    <ShoppingCartIcon className={Mystyle.icon2}/>
+                    <p>Cart</p>
+                </div>
+
+                <div className={Mystyle.nav}>
+                    <img src="/Assets/Swiggy-1594035877.jpeg" alt="picimg"/>
+
+                    <select>
+                        <option>New Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Varanasi</option>
+                        <option>Patna</option>
+                        <option>Banglore</option>
+                        <option>Chennai</option>
+                    </select>
+
+                    <SearchIcon className={Mystyle.icon1} />
+                    <p>Search</p>
+
+                    <SpeedIcon className={Mystyle.icon2}/>
+                    <p>Offers</p>
+
+                    <HelpOutlineIcon className={Mystyle.icon2}/>
+                    <p>Help</p>
+
+                    <PersonIcon className={Mystyle.icon2}/>
+                    <p>Sign In</p>
+
+                    <ShoppingCartIcon className={Mystyle.icon2}/>
+                    <p>Cart</p>
+                </div>
+
+                <div className={Mystyle.nav}>
+                    <img src="/Assets/Swiggy-1594035877.jpeg" alt="picimg"/>
+
+                    <select>
+                        <option>New Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Varanasi</option>
+                        <option>Patna</option>
+                        <option>Banglore</option>
+                        <option>Chennai</option>
+                    </select>
+
+                    <SearchIcon className={Mystyle.icon1} />
+                    <p>Search</p>
+
+                    <SpeedIcon className={Mystyle.icon2}/>
+                    <p>Offers</p>
+
+                    <HelpOutlineIcon className={Mystyle.icon2}/>
+                    <p>Help</p>
+
+                    <PersonIcon className={Mystyle.icon2}/>
+                    <p>Sign In</p>
+
+                    <ShoppingCartIcon className={Mystyle.icon2}/>
+                    <p>Cart</p>
+                </div>
+
+                <div className={Mystyle.nav}>
+                    <img src="/Assets/Swiggy-1594035877.jpeg" alt="picimg"/>
+
+                    <select>
+                        <option>New Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Varanasi</option>
+                        <option>Patna</option>
+                        <option>Banglore</option>
+                        <option>Chennai</option>
+                    </select>
+
+                    <SearchIcon className={Mystyle.icon1} />
+                    <p>Search</p>
+
+                    <SpeedIcon className={Mystyle.icon2}/>
+                    <p>Offers</p>
+
+                    <HelpOutlineIcon className={Mystyle.icon2}/>
+                    <p>Help</p>
+
+                    <PersonIcon className={Mystyle.icon2}/>
+                    <p>Sign In</p>
+
+                    <ShoppingCartIcon className={Mystyle.icon2}/>
+                    <p>Cart</p>
+                </div>
+
+                <div className={Mystyle.nav}>
+                    <img src="/Assets/Swiggy-1594035877.jpeg" alt="picimg"/>
+
+                    <select>
+                        <option>New Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Varanasi</option>
+                        <option>Patna</option>
+                        <option>Banglore</option>
+                        <option>Chennai</option>
+                    </select>
+
+                    <SearchIcon className={Mystyle.icon1} />
+                    <p>Search</p>
+
+                    <SpeedIcon className={Mystyle.icon2}/>
+                    <p>Offers</p>
+
+                    <HelpOutlineIcon className={Mystyle.icon2}/>
+                    <p>Help</p>
+
+                    <PersonIcon className={Mystyle.icon2}/>
+                    <p>Sign In</p>
+
+                    <ShoppingCartIcon className={Mystyle.icon2}/>
+                    <p>Cart</p>
+                </div>
+
                
             </>
         )
