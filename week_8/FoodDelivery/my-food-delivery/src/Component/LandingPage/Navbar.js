@@ -155,7 +155,7 @@ export default class Navbar extends Component {
                 <div>
                 <div className={Mystyle.top}>
                     <img src="https://avatars.githubusercontent.com/u/9919?s=280&v=4" alt=""/>
-                    <h4>Why GitHub?</h4>
+                    <h4>Why GitHub??</h4>
                     <p>Team</p>
                     <p>Enterprise</p>
                     <p>Explore</p>
